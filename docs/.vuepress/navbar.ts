@@ -41,6 +41,12 @@ export default navbar([
     children: ["Diet", "Shoppinglist", "Coupon", "baby/"],
   },
   {
+    text: "Java",
+    icon: "emmet",
+    prefix: "/family/",
+    children: ["Diet", "Shoppinglist", "Coupon", "baby/"],
+  },
+  {
     text: "工具",
     icon: "tool",
     children: [
