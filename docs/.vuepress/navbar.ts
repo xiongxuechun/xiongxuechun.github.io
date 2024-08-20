@@ -6,13 +6,13 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   { text: "博客", icon: "fa6-solid:blog", link: "/blog" },
   {
-    text: "应用",
+    text: "Java",
     icon: "fa6-solid:bars-staggered",
     prefix: "/",
     children: [
       "apps/Applist",
       {
-        text: "常用扩展",
+        text: "Java 并发",
         icon: "fa6-brands:chrome",
         link: "apps/Chrome",
       },
@@ -31,7 +31,7 @@ export default navbar([
     ],
   },
   {
-    text: "生活",
+    text: "算法",
     icon: "fa6-solid:bed-pulse",
     prefix: "/family/",
     children: ["Diet", "Coupon"],
