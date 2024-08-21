@@ -6,7 +6,7 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   { text: "博客", icon: "fa6-solid:blog", link: "/blog" },
   {
-    text: "Java进阶",
+    text: "Java进阶123",
     icon: "fa6-solid:bars-staggered",
     prefix: "/",
     children: [
