@@ -9,20 +9,21 @@ export default navbar([
 
     {
         text: "Java",
-        prefix: "/",
+        prefix: "/Java/",
         children: [
             {
                 text: "Java 基础",
                 icon: "",
-                prefix: "",
+                // prefix: "/base/",
                 children: [
                     {
                         text: "面向对象基础",
-                        link: "apps/topic/",
+                        link: "Java 基础/",
                     },
                     {
                         text: "基础知识体系",
-                        link: "apps/topic/",
+                        link: "apps/",
+
                     }
                 ],
             },
@@ -33,7 +34,7 @@ export default navbar([
                 children: [
                     {
                         text: "Java 集合框架详解",
-                        link: "apps/topic/",
+                        link: "apps/",
                     }
                 ],
             },
@@ -45,23 +46,23 @@ export default navbar([
                 children: [
                     {
                         text: "Java 并发知识体系",
-                        link: "apps/topic/",
+                        link: "apps/",
                     },
                     {
                         text: "Java 并发理论基础",
-                        link: "apps/topic/",
+                        link: "apps/",
                     },
                     {
                         text: "Java 并发线程",
-                        link: "apps/topic/",
+                        link: "apps/",
                     },
                     {
                         text: "J.U.C 知识体系",
-                        link: "apps/topic/",
+                        link: "apps/",
                     },
                     {
                         text: "Java 并发编程实战",
-                        link: "apps/topic/",
+                        link: "apps/",
                     }
                 ],
             },
@@ -72,7 +73,7 @@ export default navbar([
                 children: [
                     {
                         text: "Java IO知识体系",
-                        link: "apps/topic/",
+                        link: "apps/",
                     }
                 ],
             },
@@ -83,7 +84,7 @@ export default navbar([
                 children: [
                     {
                         text: "JVM 知识体系",
-                        link: "apps/topic/",
+                        link: "apps/",
                     }
                 ],
             },
@@ -91,7 +92,7 @@ export default navbar([
     },
     {
         text: "算法",
-        prefix: "/family/",
+        prefix: "/算法/",
         children: [
             {
                 text: "算法基础",
@@ -100,7 +101,7 @@ export default navbar([
                 children: [
                     {
                         text: "数据结构知识体系",
-                        link: "apps/topic/",
+                        link: "数据结构知识体系/",
                     },
                     {
                         text: "常见算法",
@@ -127,20 +128,20 @@ export default navbar([
     },
     {
         text: "框架",
-        prefix: "/family/",
+        prefix: "/框架/",
         children: [
             {
                 text: "Spring 框架知识体系",
                 icon: "",
-                prefix: "",
+                // prefix: "",
                 children: [
                     {
-                        text: "Spring框架组成",
-                        link: "apps/topic/",
+                        text: "Spring 框架知识体系",
+                        link: "Spring/",
                     },
                     {
                         text: "AOP",
-                        link: "apps/topic/",
+                        link: "Spring/AOP/",
                     },
                     {
                         text: "IOC",
@@ -378,4 +379,5 @@ export default navbar([
             }
         ],
     },
+
 ]);
