@@ -31,6 +31,66 @@
       "tags": [
         "使用指南"
       ]
+    },
+    {
+      "title": "Java 基础 - 面向对象",
+      "url": "https://www.codenook.cn/Java/Java%20%E5%9F%BA%E7%A1%80/Java%20%E5%9F%BA%E7%A1%80%20-%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html",
+      "id": "https://www.codenook.cn/Java/Java%20%E5%9F%BA%E7%A1%80/Java%20%E5%9F%BA%E7%A1%80%20-%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html",
+      "summary": "Java 基础 - 面向对象 本文主要介绍Java OOP 面向对象基础和相关类图。@pdai Java 基础 - 面向对象 三大特性 封装 继承 多态 类图 泛化关系 (Generalization) 实现关系 (Realization) 聚合关系 (Aggregation) 组合关系 (Composition) 关联关系 (Association)...",
+      "content_html": "\n<blockquote>\n<p>本文主要介绍Java OOP 面向对象基础和相关类图。@pdai</p>\n</blockquote>\n<ul>\n<li>[Java 基础 - 面向对象](#java-基础</li>\n</ul>\n",
+      "image": "https://pdai.tech/images/pics/SoWkIImgAStDuU8goIp9ILLmJyrBBKh.png",
+      "date_published": "2024-09-04T14:55:43.000Z",
+      "date_modified": "2024-09-04T14:55:43.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "# ♥Spring框架知识体系详解♥",
+      "url": "https://www.codenook.cn/%E6%A1%86%E6%9E%B6/Spring/Spring%E6%A1%86%E6%9E%B6%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E8%AF%A6%E8%A7%A3.html",
+      "id": "https://www.codenook.cn/%E6%A1%86%E6%9E%B6/Spring/Spring%E6%A1%86%E6%9E%B6%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E8%AF%A6%E8%A7%A3.html",
+      "summary": "# ♥Spring框架知识体系详解♥ 提示 本系列主要介绍Spring框架整体架构，Spring的核心IOC，AOP的案例和具体实现机制；以及SpringMVC框架的案例和实现机制。@pdai # 相关文章 首先， 从Spring框架的整体架构和组成对整体框架有个认知。 Spring是什么？它是怎么诞生的？有哪些主要的组件和核心功能呢? 本文通过这几个...",
+      "content_html": "\n<p>提示</p>\n<p>本系列主要介绍Spring框架整体架构，Spring的核心IOC，AOP的案例和具体实现机制；以及SpringMVC框架的案例和实现机制。@pdai</p>\n<p><a href=\"#%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0\">#</a> 相关文章</p>\n",
+      "image": "https://pdai.tech/images/spring/springframework/spring-framework-introduce-8.png",
+      "date_published": "2024-09-04T14:55:43.000Z",
+      "date_modified": "2024-09-04T14:55:43.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "# ♥数据结构基础知识体系详解♥",
+      "url": "https://www.codenook.cn/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E8%AF%A6%E8%A7%A3.html",
+      "id": "https://www.codenook.cn/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E8%AF%A6%E8%A7%A3.html",
+      "summary": "# ♥数据结构基础知识体系详解♥ 提示 对于数据结构这种基础内容，在构建其知识体系时要避免自己再造轮子，需要高一点层次整体上去理解它(格局要大一点，不要盯着代码)，要了解算法思想，性能及适用场景，用一些工具和别人梳理的结果帮助自己构建知识体系等。@pdai # 知识体系 知识体系系统性梳理 学习思路 避免孤立的学习知识点，要关联学习。比如实际应用当中，...",
+      "content_html": "\n<p>提示</p>\n<p>对于数据结构这种基础内容，在构建其知识体系时要避免自己再造轮子，需要高一点层次整体上去理解它(格局要大一点，不要盯着代码)，要了解算法思想，性能及适用场景，用一些工具和别人梳理的结果帮助自己构建知识体系等。@pdai</p>\n<ul>\n<li><a href=\"/md/algorithm/alg-basic-overview.html#%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB\" target=\"_blank\">知识体系</a></li>\n<li><a href=\"/md/algorithm/alg-basic-overview.html#%E5%85%A5%E9%97%A8%E6%8E%A8%E8%8D%90\" target=\"_blank\">入门推荐</a></li>\n<li><a href=\"/md/algorithm/alg-basic-overview.html#%E8%BF%9B%E9%98%B6%E6%8E%A8%E8%8D%90\" target=\"_blank\">进阶推荐</a></li>\n<li><a href=\"/md/algorithm/alg-basic-overview.html#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0\" target=\"_blank\">参考文章</a>\n<a href=\"#%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB\">#</a> 知识体系</li>\n</ul>\n",
+      "image": "https://pdai.tech/images/alg/alg-overview-x.png",
+      "date_published": "2024-09-04T14:55:43.000Z",
+      "date_modified": "2024-09-04T14:55:43.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "# Spring进阶 - Spring AOP实现原理详解之AOP代理的创建",
+      "url": "https://www.codenook.cn/%E6%A1%86%E6%9E%B6/Spring/AOP/SAOP%E4%BB%A3%E7%90%86%E7%9A%84%E5%88%9B%E5%BB%BA.html",
+      "id": "https://www.codenook.cn/%E6%A1%86%E6%9E%B6/Spring/AOP/SAOP%E4%BB%A3%E7%90%86%E7%9A%84%E5%88%9B%E5%BB%BA.html",
+      "summary": "# Spring进阶 - Spring AOP实现原理详解之AOP代理的创建 上文我们介绍了Spring AOP原理解析的切面实现过程(将切面类的所有切面方法根据使用的注解生成对应Advice，并将Advice连同切入点匹配器和切面类等信息一并封装到Advisor)。本文在此基础上继续介绍，代理（cglib代理和JDK代理）的创建过程。@pdai Sp...",
+      "content_html": "\n<blockquote>\n<p>上文我们介绍了Spring AOP原理解析的切面实现过程(将切面类的所有切面方法根据使用的注解生成对应Advice，并将Advice连同切入点匹配器和切面类等信息一并封装到Advisor)。本文在此基础上继续介绍，代理（cglib代理和JDK代理）的创建过程。@pdai</p>\n</blockquote>\n<ul>\n<li>[Spring进阶 - Spring AOP实现原理详解之AOP代理的创建](#spring进阶</li>\n</ul>\n",
+      "image": "https://pdai.tech/images/spring/springframework/spring-springframework-aop-51.png",
+      "date_published": "2024-09-04T14:55:43.000Z",
+      "date_modified": "2024-09-04T14:55:43.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "# Spring进阶- Spring IOC实现原理详解之Bean实例化(生命周期,循环依赖等)",
+      "url": "https://www.codenook.cn/%E6%A1%86%E6%9E%B6/Spring/IOC/Bean%E5%AE%9E%E4%BE%8B%E5%8C%96(%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F_%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E7%AD%89).html",
+      "id": "https://www.codenook.cn/%E6%A1%86%E6%9E%B6/Spring/IOC/Bean%E5%AE%9E%E4%BE%8B%E5%8C%96(%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F_%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E7%AD%89).html",
+      "summary": "# Spring进阶- Spring IOC实现原理详解之Bean实例化(生命周期,循环依赖等) 上文，我们看了IOC设计要点和设计结构；以及Spring如何实现将资源配置（以xml配置为例）通过加载，解析，生成BeanDefination并注册到IoC容器中的；容器中存放的是Bean的定义即BeanDefinition放到beanDefinition...",
+      "content_html": "\n<blockquote>\n<p>上文，我们看了IOC设计要点和设计结构；以及Spring如何实现将资源配置（以xml配置为例）通过加载，解析，生成BeanDefination并注册到IoC容器中的；容器中存放的是Bean的定义即BeanDefinition放到beanDefinitionMap中，本质上是一个<code>ConcurrentHashMap&lt;String, Object&gt;</code>；并且BeanDefinition接口中包含了这个类的Class信息以及是否是单例等。那么如何从BeanDefinition中实例化Bean对象呢，这是本文主要研究的内容？@pdai</p>\n</blockquote>\n<ul>\n<li><a href=\"#spring%E8%BF%9B%E9%98%B6--spring-ioc%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%E4%B9%8Bbean%E5%AE%9E%E4%BE%8B%E5%8C%96%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E7%AD%89\">Spring进阶- Spring IOC实现原理详解之Bean实例化(生命周期,循环依赖等)</a>\n<ul>\n<li><a href=\"#%E5%BC%95%E5%85%A5\">引入</a></li>\n<li><a href=\"#beanfactory%E4%B8%ADgetbean%E7%9A%84%E4%B8%BB%E4%BD%93%E6%80%9D%E8%B7%AF\">BeanFactory中getBean的主体思路</a>\n<ul>\n<li><a href=\"#%E5%88%9D%E6%AD%A5%E7%9A%84%E6%80%9D%E8%80%83\">初步的思考</a></li>\n<li><a href=\"#spring%E4%B8%ADgetbean%E7%9A%84%E4%B8%BB%E4%BD%93%E6%80%9D%E8%B7%AF\">Spring中getBean的主体思路</a></li>\n</ul>\n</li>\n<li><a href=\"#%E9%87%8D%E7%82%B9spring%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98\">重点：Spring如何解决循环依赖问题</a>\n<ul>\n<li><a href=\"#spring%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E5%B1%9E%E6%80%A7%E4%BE%9D%E8%B5%96\">Spring单例模式下的属性依赖</a></li>\n<li><a href=\"#spring%E4%B8%BA%E4%BD%95%E4%B8%8D%E8%83%BD%E8%A7%A3%E5%86%B3%E9%9D%9E%E5%8D%95%E4%BE%8B%E5%B1%9E%E6%80%A7%E4%B9%8B%E5%A4%96%E7%9A%84%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96\">Spring为何不能解决非单例属性之外的循环依赖？</a>\n<ul>\n<li><a href=\"#spring%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E8%A7%A3%E5%86%B3%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96\">Spring为什么不能解决构造器的循环依赖？</a></li>\n<li><a href=\"#spring%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E8%A7%A3%E5%86%B3prototype%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96\">Spring为什么不能解决prototype作用域循环依赖？</a></li>\n<li><a href=\"#spring%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E8%A7%A3%E5%86%B3%E5%A4%9A%E4%BE%8B%E7%9A%84%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96\">Spring为什么不能解决多例的循环依赖？</a></li>\n</ul>\n</li>\n<li><a href=\"#%E9%82%A3%E4%B9%88%E5%85%B6%E5%AE%83%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3\">那么其它循环依赖如何解决？</a></li>\n</ul>\n</li>\n<li><a href=\"#%E9%87%8D%E7%82%B9spring%E4%B8%ADbean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F\">重点：Spring中Bean的生命周期</a>\n<ul>\n<li><a href=\"#spring-bean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%B5%81%E7%A8%8B\">Spring Bean生命周期流程</a></li>\n<li><a href=\"#spring-bean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%A1%88%E4%BE%8B\">Spring Bean生命周期案例</a></li>\n<li><a href=\"#spring-bean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%BA%90%E7%A0%81\">Spring Bean生命周期源码</a></li>\n</ul>\n</li>\n<li><a href=\"#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0\">参考文章</a></li>\n</ul>\n</li>\n</ul>\n<p><a href=\"#%E5%BC%95%E5%85%A5\">#</a> 引入</p>\n",
+      "image": "https://pdai.tech/images/spring/springframework/spring-framework-ioc-source-74.png",
+      "date_published": "2024-09-04T14:55:43.000Z",
+      "date_modified": "2024-09-04T14:55:43.000Z",
+      "authors": [],
+      "tags": []
     }
   ]
 }
