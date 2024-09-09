@@ -3,8 +3,8 @@
   "title": "知识体系",
   "home_page_url": "https://www.codenook.cn/",
   "feed_url": "https://www.codenook.cn/feed.json",
-  "description": "不积跬步无以至千里, 仰望星空还需脚踏实地，告别碎片化学习，构筑知识体系。",
-  "favicon": "https://www.codenook.cn/favicon.ico",
+  "description": "不积跬步无以至千里, 仰望星空还需脚踏实地，碎片化的输入，体系化的沉淀, 消化、应用才会成为我们的财富",
+  "favicon": "https://www.codenook.cn/logo-favicon.png",
   "items": [
     {
       "title": "博客文章样例2",

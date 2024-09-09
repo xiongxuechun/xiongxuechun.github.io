@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
   <id>https://www.codenook.cn/</id>
   <title>知识体系</title>
-  <subtitle>不积跬步无以至千里, 仰望星空还需脚踏实地，告别碎片化学习，构筑知识体系。</subtitle>
-  <icon>https://www.codenook.cn/favicon.ico</icon>
-  <updated>2024-09-04T14:57:12.988Z</updated>
+  <subtitle>不积跬步无以至千里, 仰望星空还需脚踏实地，碎片化的输入，体系化的沉淀, 消化、应用才会成为我们的财富</subtitle>
+  <icon>https://www.codenook.cn/logo-favicon.png</icon>
+  <updated>2024-09-09T13:39:12.674Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://www.codenook.cn/atom.xml"/>
   <link rel="alternate" href="https://www.codenook.cn/"/>

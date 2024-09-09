@@ -4,10 +4,10 @@
     <atom:link href="https://www.codenook.cn/rss.xml" rel="self" type="application/rss+xml"/>
     <title>知识体系</title>
     <link>https://www.codenook.cn/</link>
-    <description>不积跬步无以至千里, 仰望星空还需脚踏实地，告别碎片化学习，构筑知识体系。</description>
+    <description>不积跬步无以至千里, 仰望星空还需脚踏实地，碎片化的输入，体系化的沉淀, 消化、应用才会成为我们的财富</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 04 Sep 2024 14:57:12 GMT</pubDate>
-    <lastBuildDate>Wed, 04 Sep 2024 14:57:12 GMT</lastBuildDate>
+    <pubDate>Mon, 09 Sep 2024 13:39:12 GMT</pubDate>
+    <lastBuildDate>Mon, 09 Sep 2024 13:39:12 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
