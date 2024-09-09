@@ -145,7 +145,7 @@ export default navbar([
                     },
                     {
                         text: "IOC",
-                        link: "apps/topic/",
+                        link: "Spring/IOC/",
                     }
                 ],
             },

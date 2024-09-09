@@ -14,8 +14,8 @@ export default hopeTheme({
     email: "15293191747@163.com"
   },
 
-  favicon: "/favicon.ico",
-  logo: "/logo.svg",
+  favicon: "/logo-favicon.png",
+  logo: "/logo.png",
 
   // 网站文章的版权声明
   license: "CC BY-NC-ND 4.0",
@@ -73,16 +73,16 @@ export default hopeTheme({
   // 主题功能选项：https://theme-hope.vuejs.press/zh/config/theme/feature.html
   blog: {
     articleInfo: ["Date", "PageView", "Category", "Tag", "ReadingTime"],
-    name: "清顺",
-    avatar: "/avatar_self.webp",
-    description: "迷信新工具，热衷于研究开源软件、心理学理论，定期分享探索成果",
-    intro: "/intro.html",
+    name: "Carney",
+    avatar: "/avatar-photo.jfif",
+    description: "输入、内化、沉淀、输出   碎片化的输入，体系化的沉淀",
+    intro: "/",
     medias: {
       GitHub: "https://github.com/xiongxuechun",
       // Zhihu: "https://www.zhihu.com/people/qingwhat",
-      Wechat: "https://img.newzone.top/wechat.svg",
+      Wechat: "/wechat.jpg",
       Email: "15293191747@163.com",
-      RSS: "/rss.xml",
+      // RSS: "/rss.xml",
     },
   },
 

@@ -1,6 +1,6 @@
 ---
 article: false
-title: LearnData 开源笔记
+title: 达伽马
 icon: fa6-solid:book-open-reader
 ---
 
