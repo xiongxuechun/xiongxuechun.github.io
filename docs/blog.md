@@ -3,7 +3,7 @@
 home: true
 layout: BlogHome
 icon: fa6-solid:house-crack
-title: 互联网小白
+title: 互联网小白33333
 #heroImage: /logo.svg
 heroText: 互联网小白
 tagline: 盛年不重来，一日难再晨

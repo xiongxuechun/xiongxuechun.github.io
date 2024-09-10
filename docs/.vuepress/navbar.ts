@@ -14,7 +14,6 @@ export default navbar([
             {
                 text: "Java 基础",
                 icon: "",
-                // prefix: "/base/",
                 children: [
                     {
                         text: "面向对象基础",

@@ -1,8 +1,16 @@
-﻿Java 基础 \- 面向对象
+﻿---
+title: Java 基础-面向对象
+category: 
+	- Java 基础
+tag:
+	- Java 基础
+order: -1
+---
+Java 基础 \- 面向对象
 ===================================
 
 
-> 本文主要介绍Java OOP 面向对象基础和相关类图。@pdai
+> 本文主要介绍Java OOP 面向对象基础和相关类图。
 
 * [Java 基础 \- 面向对象](#java-基础---面向对象)
 	+ [三大特性](#三大特性)
@@ -38,7 +46,7 @@
 注意到 gender 属性使用 int 数据类型进行存储，封装使得用户注意不到这种实现细节。并且在需要修改 gender 属性使用的数据类型时，也可以在不影响客户端代码的情况下进行。
 
 
-```
+```java
 public class Person {
 
     private String name;
@@ -92,7 +100,7 @@ Animal animal = new Cat();
 下面的代码中，乐器类(Instrument)有两个子类: Wind 和 Percussion，它们都覆盖了父类的 play() 方法，并且在 main() 方法中使用父类 Instrument 来引用 Wind 和 Percussion 对象。在 Instrument 引用调用 play() 方法时，会执行实际引用对象所在类的 play() 方法，而不是 Instrument 类的方法。
 
 
-```
+```java
 public class Instrument {
     public void play() {
         System.out.println("Instrument is playing...");
@@ -132,7 +140,7 @@ public class Music {
 
 用来描述继承关系，在 Java 中使用 extends 关键字。
 
-![](https://pdai.tech/images/pics/SoWkIImgAStDuU8goIp9ILLmJyrBBKh.png)
+![](/imgs/SoWkIImgAStDuU8goIp9ILLmJyrBBKh.png)
 
 
 ```
@@ -249,7 +257,7 @@ School "1" - "n" Student
 ![](https://pdai.tech/images/pics/LOun2W9134NxVugmbJPp15d4LalxC4O.png)
 
 
-```
+```shell
 @startuml
 
 title Dependency
