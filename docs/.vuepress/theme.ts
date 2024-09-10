@@ -138,9 +138,9 @@ export default hopeTheme({
             // Giscus
             provider: "Giscus",
             repo: "xiongxuechun/xiongxuechun.github.io",
-            repoId: "R_kgDOHdfk6Q",
+            repoId: "R_kgDOMlZEoQ",
             category: "Comments",
-            categoryId: "DIC_kwDOHdfk6c4CQYNn",
+            categoryId: "DIC_kwDOMlZEoc4CiWFm",
         },
 
         // 组件库
