@@ -38,9 +38,8 @@
       "id": "https://www.codenook.cn/Java/Java%20%E5%9F%BA%E7%A1%80/Java%20%E5%9F%BA%E7%A1%80%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html",
       "summary": "Java 基础 - 面向对象 本文主要介绍Java OOP 面向对象基础和相关类图。 Java 基础 - 面向对象 三大特性 封装 继承 多态 类图 泛化关系 (Generalization) 实现关系 (Realization) 聚合关系 (Aggregation) 组合关系 (Composition) 关联关系 (Association) 依赖关系...",
       "content_html": "\n<blockquote>\n<p>本文主要介绍Java OOP 面向对象基础和相关类图。</p>\n</blockquote>\n<ul>\n<li>[Java 基础 - 面向对象](#java-基础</li>\n</ul>\n",
-      "image": "https://www.codenook.cn/imgs/SoWkIImgAStDuU8goIp9ILLmJyrBBKh.png",
       "date_published": "2024-09-04T14:55:43.000Z",
-      "date_modified": "2024-09-10T09:22:27.000Z",
+      "date_modified": "2024-09-10T10:05:42.000Z",
       "authors": [],
       "tags": [
         "Java 基础"
