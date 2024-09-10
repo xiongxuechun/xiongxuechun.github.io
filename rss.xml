@@ -6,12 +6,13 @@
     <link>https://www.codenook.cn/</link>
     <description>不积跬步无以至千里, 仰望星空还需脚踏实地，碎片化的输入，体系化的沉淀, 消化、应用才会成为我们的财富</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 09 Sep 2024 13:39:12 GMT</pubDate>
-    <lastBuildDate>Mon, 09 Sep 2024 13:39:12 GMT</lastBuildDate>
+    <pubDate>Tue, 10 Sep 2024 09:23:56 GMT</pubDate>
+    <lastBuildDate>Tue, 10 Sep 2024 09:23:56 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
     <category>使用指南</category>
+    <category>Java 基础</category>
     <item>
       <title>博客文章样例2</title>
       <link>https://www.codenook.cn/posts/2024-03-02-blog_example2.html</link>
@@ -35,15 +36,52 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>Java 基础 - 面向对象</title>
-      <link>https://www.codenook.cn/Java/Java%20%E5%9F%BA%E7%A1%80/Java%20%E5%9F%BA%E7%A1%80%20-%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html</link>
-      <guid>https://www.codenook.cn/Java/Java%20%E5%9F%BA%E7%A1%80/Java%20%E5%9F%BA%E7%A1%80%20-%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html</guid>
-      <source url="https://www.codenook.cn/rss.xml">Java 基础 - 面向对象</source>
-      <description>Java 基础 - 面向对象 本文主要介绍Java OOP 面向对象基础和相关类图。@pdai Java 基础 - 面向对象 三大特性 封装 继承 多态 类图 泛化关系 (Generalization) 实现关系 (Realization) 聚合关系 (Aggregation) 组合关系 (Composition) 关联关系 (Association)...</description>
+      <title>Java 基础-面向对象</title>
+      <link>https://www.codenook.cn/Java/Java%20%E5%9F%BA%E7%A1%80/Java%20%E5%9F%BA%E7%A1%80%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html</link>
+      <guid>https://www.codenook.cn/Java/Java%20%E5%9F%BA%E7%A1%80/Java%20%E5%9F%BA%E7%A1%80%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html</guid>
+      <source url="https://www.codenook.cn/rss.xml">Java 基础-面向对象</source>
+      <description>Java 基础 - 面向对象 本文主要介绍Java OOP 面向对象基础和相关类图。 Java 基础 - 面向对象 三大特性 封装 继承 多态 类图 泛化关系 (Generalization) 实现关系 (Realization) 聚合关系 (Aggregation) 组合关系 (Composition) 关联关系 (Association) 依赖关系...</description>
+      <category>Java 基础</category>
       <pubDate>Wed, 04 Sep 2024 14:55:43 GMT</pubDate>
       <content:encoded><![CDATA[
 <blockquote>
-<p>本文主要介绍Java OOP 面向对象基础和相关类图。@pdai</p>
+<p>本文主要介绍Java OOP 面向对象基础和相关类图。</p>
+</blockquote>
+<ul>
+<li>[Java 基础 - 面向对象](#java-基础</li>
+</ul>
+]]></content:encoded>
+      <enclosure url="https://www.codenook.cn/imgs/SoWkIImgAStDuU8goIp9ILLmJyrBBKh.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Java 基础-知识点</title>
+      <link>https://www.codenook.cn/Java/Java%20%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80%20%E7%9F%A5%E8%AF%86%E7%82%B9.html</link>
+      <guid>https://www.codenook.cn/Java/Java%20%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80%20%E7%9F%A5%E8%AF%86%E7%82%B9.html</guid>
+      <source url="https://www.codenook.cn/rss.xml">Java 基础-知识点</source>
+      <description># Java 基础 - 知识点 本文主要对Java基础知识点进行总结。 @pdai Java 基础 - 知识点 数据类型 包装类型 缓存池 String 概览 不可变的好处 String, StringBuffer and StringBuilder String.intern() 运算 参数传递 float 与 double 隐式类型转换 switc...</description>
+      <category>Java 基础</category>
+      <pubDate>Tue, 10 Sep 2024 09:22:27 GMT</pubDate>
+      <content:encoded><![CDATA[
+<blockquote>
+<p>本文主要对Java基础知识点进行总结。 @pdai</p>
+</blockquote>
+<ul>
+<li>[Java 基础 - 知识点](#java-基础</li>
+</ul>
+]]></content:encoded>
+      <enclosure url="https://pdai.tech/images/pics/f76067a5-7d5f-4135-9549-8199c77d8f1c.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Java 基础-面向对象</title>
+      <link>https://www.codenook.cn/Java/Java%20%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/Java%20%E5%9F%BA%E7%A1%80%20-%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html</link>
+      <guid>https://www.codenook.cn/Java/Java%20%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/Java%20%E5%9F%BA%E7%A1%80%20-%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html</guid>
+      <source url="https://www.codenook.cn/rss.xml">Java 基础-面向对象</source>
+      <description>Java 基础 - 面向对象 本文主要介绍Java OOP 面向对象基础和相关类图。 Java 基础 - 面向对象 三大特性 封装 继承 多态 类图 泛化关系 (Generalization) 实现关系 (Realization) 聚合关系 (Aggregation) 组合关系 (Composition) 关联关系 (Association) 依赖关系...</description>
+      <category>Java 基础</category>
+      <pubDate>Wed, 04 Sep 2024 14:55:43 GMT</pubDate>
+      <content:encoded><![CDATA[
+<blockquote>
+<p>本文主要介绍Java OOP 面向对象基础和相关类图。</p>
 </blockquote>
 <ul>
 <li>[Java 基础 - 面向对象](#java-基础</li>

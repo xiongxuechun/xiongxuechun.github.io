@@ -33,16 +33,46 @@
       ]
     },
     {
-      "title": "Java 基础 - 面向对象",
-      "url": "https://www.codenook.cn/Java/Java%20%E5%9F%BA%E7%A1%80/Java%20%E5%9F%BA%E7%A1%80%20-%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html",
-      "id": "https://www.codenook.cn/Java/Java%20%E5%9F%BA%E7%A1%80/Java%20%E5%9F%BA%E7%A1%80%20-%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html",
-      "summary": "Java 基础 - 面向对象 本文主要介绍Java OOP 面向对象基础和相关类图。@pdai Java 基础 - 面向对象 三大特性 封装 继承 多态 类图 泛化关系 (Generalization) 实现关系 (Realization) 聚合关系 (Aggregation) 组合关系 (Composition) 关联关系 (Association)...",
-      "content_html": "\n<blockquote>\n<p>本文主要介绍Java OOP 面向对象基础和相关类图。@pdai</p>\n</blockquote>\n<ul>\n<li>[Java 基础 - 面向对象](#java-基础</li>\n</ul>\n",
+      "title": "Java 基础-面向对象",
+      "url": "https://www.codenook.cn/Java/Java%20%E5%9F%BA%E7%A1%80/Java%20%E5%9F%BA%E7%A1%80%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html",
+      "id": "https://www.codenook.cn/Java/Java%20%E5%9F%BA%E7%A1%80/Java%20%E5%9F%BA%E7%A1%80%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html",
+      "summary": "Java 基础 - 面向对象 本文主要介绍Java OOP 面向对象基础和相关类图。 Java 基础 - 面向对象 三大特性 封装 继承 多态 类图 泛化关系 (Generalization) 实现关系 (Realization) 聚合关系 (Aggregation) 组合关系 (Composition) 关联关系 (Association) 依赖关系...",
+      "content_html": "\n<blockquote>\n<p>本文主要介绍Java OOP 面向对象基础和相关类图。</p>\n</blockquote>\n<ul>\n<li>[Java 基础 - 面向对象](#java-基础</li>\n</ul>\n",
+      "image": "https://www.codenook.cn/imgs/SoWkIImgAStDuU8goIp9ILLmJyrBBKh.png",
+      "date_published": "2024-09-04T14:55:43.000Z",
+      "date_modified": "2024-09-10T09:22:27.000Z",
+      "authors": [],
+      "tags": [
+        "Java 基础"
+      ]
+    },
+    {
+      "title": "Java 基础-知识点",
+      "url": "https://www.codenook.cn/Java/Java%20%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80%20%E7%9F%A5%E8%AF%86%E7%82%B9.html",
+      "id": "https://www.codenook.cn/Java/Java%20%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80%20%E7%9F%A5%E8%AF%86%E7%82%B9.html",
+      "summary": "# Java 基础 - 知识点 本文主要对Java基础知识点进行总结。 @pdai Java 基础 - 知识点 数据类型 包装类型 缓存池 String 概览 不可变的好处 String, StringBuffer and StringBuilder String.intern() 运算 参数传递 float 与 double 隐式类型转换 switc...",
+      "content_html": "\n<blockquote>\n<p>本文主要对Java基础知识点进行总结。 @pdai</p>\n</blockquote>\n<ul>\n<li>[Java 基础 - 知识点](#java-基础</li>\n</ul>\n",
+      "image": "https://pdai.tech/images/pics/f76067a5-7d5f-4135-9549-8199c77d8f1c.jpg",
+      "date_published": "2024-09-10T09:22:27.000Z",
+      "date_modified": "2024-09-10T09:22:27.000Z",
+      "authors": [],
+      "tags": [
+        "Java 基础"
+      ]
+    },
+    {
+      "title": "Java 基础-面向对象",
+      "url": "https://www.codenook.cn/Java/Java%20%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/Java%20%E5%9F%BA%E7%A1%80%20-%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html",
+      "id": "https://www.codenook.cn/Java/Java%20%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/Java%20%E5%9F%BA%E7%A1%80%20-%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html",
+      "summary": "Java 基础 - 面向对象 本文主要介绍Java OOP 面向对象基础和相关类图。 Java 基础 - 面向对象 三大特性 封装 继承 多态 类图 泛化关系 (Generalization) 实现关系 (Realization) 聚合关系 (Aggregation) 组合关系 (Composition) 关联关系 (Association) 依赖关系...",
+      "content_html": "\n<blockquote>\n<p>本文主要介绍Java OOP 面向对象基础和相关类图。</p>\n</blockquote>\n<ul>\n<li>[Java 基础 - 面向对象](#java-基础</li>\n</ul>\n",
       "image": "https://pdai.tech/images/pics/SoWkIImgAStDuU8goIp9ILLmJyrBBKh.png",
       "date_published": "2024-09-04T14:55:43.000Z",
-      "date_modified": "2024-09-04T14:55:43.000Z",
+      "date_modified": "2024-09-10T09:22:27.000Z",
       "authors": [],
-      "tags": []
+      "tags": [
+        "Java 基础"
+      ]
     },
     {
       "title": "# ♥Spring框架知识体系详解♥",
