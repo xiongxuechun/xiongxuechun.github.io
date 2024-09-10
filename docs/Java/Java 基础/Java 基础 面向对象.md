@@ -140,7 +140,7 @@ public class Music {
 
 用来描述继承关系，在 Java 中使用 extends 关键字。
 
-![](/imgs/SoWkIImgAStDuU8goIp9ILLmJyrBBKh.png)
+![](../../.vuepress/public/imgs/SoWkIImgAStDuU8goIp9ILLmJyrBBKh.png)
 
 
 ```
