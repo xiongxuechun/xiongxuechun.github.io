@@ -256,7 +256,7 @@ export default navbar([
     },
     {
         text: "项目实战",
-        prefix: "/family/",
+        prefix: "/项目/",
         children: [
             {
                 text: "电商项目",
@@ -275,8 +275,8 @@ export default navbar([
                 prefix: "",
                 children: [
                     {
-                        text: "ElasticSearch",
-                        link: "apps/topic/",
+                        text: "详解支付系统",
+                        link: "支付系统/",
                     }
                 ],
             }

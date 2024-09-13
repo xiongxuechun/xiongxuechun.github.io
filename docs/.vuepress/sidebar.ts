@@ -6,6 +6,7 @@ export default sidebar({
     "/Java/": "structure",
     "/算法/": "structure",
     "/框架/": "structure",
+    "/项目/": "structure",
     "/faq/": "structure",
     "/demo/": "structure",
 });
