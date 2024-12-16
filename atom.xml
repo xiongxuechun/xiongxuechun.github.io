@@ -4,13 +4,14 @@
   <title>知识体系</title>
   <subtitle>不积跬步无以至千里, 仰望星空还需脚踏实地，碎片化的输入，体系化的沉淀, 消化、应用才会成为我们的财富</subtitle>
   <icon>https://www.codenook.cn/logo-favicon.png</icon>
-  <updated>2024-09-13T10:35:09.217Z</updated>
+  <updated>2024-12-16T09:47:05.089Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://www.codenook.cn/atom.xml"/>
   <link rel="alternate" href="https://www.codenook.cn/"/>
   <category term="工具"/>
   <category term="使用指南"/>
   <category term="Java 基础"/>
+  <category term="项目"/>
   <entry>
     <title type="text">博客文章样例2</title>
     <id>https://www.codenook.cn/posts/2024-03-02-blog_example2.html</id>
@@ -261,87 +262,1144 @@
     <published>2024-09-04T14:55:43.000Z</published>
   </entry>
   <entry>
-    <title type="text"># Spring进阶 - Spring AOP实现原理详解之AOP代理的创建</title>
-    <id>https://www.codenook.cn/%E6%A1%86%E6%9E%B6/Spring/AOP/SAOP%E4%BB%A3%E7%90%86%E7%9A%84%E5%88%9B%E5%BB%BA.html</id>
-    <link href="https://www.codenook.cn/%E6%A1%86%E6%9E%B6/Spring/AOP/SAOP%E4%BB%A3%E7%90%86%E7%9A%84%E5%88%9B%E5%BB%BA.html"/>
-    <updated>2024-09-04T14:55:43.000Z</updated>
-    <summary type="html"><![CDATA[
-<blockquote>
-<p>上文我们介绍了Spring AOP原理解析的切面实现过程(将切面类的所有切面方法根据使用的注解生成对应Advice，并将Advice连同切入点匹配器和切面类等信息一并封装到Advisor)。本文在此基础上继续介绍，代理（cglib代理和JDK代理）的创建过程。@pdai</p>
-</blockquote>
+    <title type="text"></title>
+    <id>https://www.codenook.cn/%E9%A1%B9%E7%9B%AE/%E5%85%A8%E6%B8%A0%E9%81%93ERP/%E7%94%B5%E5%95%86OMS.html</id>
+    <link href="https://www.codenook.cn/%E9%A1%B9%E7%9B%AE/%E5%85%A8%E6%B8%A0%E9%81%93ERP/%E7%94%B5%E5%95%86OMS.html"/>
+    <updated>2024-12-16T09:31:05.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>订单管理系统（OMS，Order Management System）</strong></p>
+<p><strong>一. 业务现状</strong></p>
+<ol>
+<li><strong>多渠道、多店铺运营</strong></li>
+</ol>
+<p>随着公司业务的发展，商品销售涉及的电商平台不断增加，目前已在9大电商平台上共运营38个店铺，多个直播平台、多个直播账号、多个直播间带货。</p>
+<ol>
+<li><strong>低效的店铺管理方式</strong></li>
+</ol>
+<p>当前采用**“人工巡店”**的方式进行店铺和直播间管理，周期性地在各个店铺直播间轮训，查看平台店铺是否有客服问题需要处理，查看运营数据。</p>]]></summary>
+    <content type="html"><![CDATA[<p><strong>订单管理系统（OMS，Order Management System）</strong></p>
+<p><strong>一. 业务现状</strong></p>
+<ol>
+<li><strong>多渠道、多店铺运营</strong></li>
+</ol>
+<p>随着公司业务的发展，商品销售涉及的电商平台不断增加，目前已在9大电商平台上共运营38个店铺，多个直播平台、多个直播账号、多个直播间带货。</p>
+<ol>
+<li><strong>低效的店铺管理方式</strong></li>
+</ol>
+<p>当前采用**“人工巡店”**的方式进行店铺和直播间管理，周期性地在各个店铺直播间轮训，查看平台店铺是否有客服问题需要处理，查看运营数据。</p>
+<p>https://gitmind.cn/app/docs/mjshbdij</p>
+<ol>
+<li><strong>数据碎片化与人工统计依赖</strong></li>
+</ol>
+<p>各个店铺的<strong>运营数据散布在各个电商平台上，没有集中的数据视角</strong>。精细化运营分析依赖人工统计，使得数据分析工作困难重重。</p>
+<p><strong>二. 存在问题</strong></p>
+<ol>
+<li><strong>工作效率问题</strong></li>
+</ol>
+<p>处理电商问题需要在9个电商后台的50+个店铺间切换，盲巡方式导致工作效率低下。</p>
+<p>客服团队在处理问题后还需填写线下表格，增加了工作负担。</p>
+<ol>
+<li><strong>时效性和团队管理问题</strong></li>
+</ol>
+<p>影响用户问题处理时效，从而对用户体验和店铺相关运营指标产生负面影响。</p>
+<p>电商售后团队工作情况难以追踪，团队管理受到限制。</p>
+<ol>
+<li>
+<p><strong>数据孤岛问题</strong></p>
+</li>
+<li>
+<p>数据<strong>出口多、口径多，业务布局涉及多个平台系统，获取数据难度大</strong>，一线人力投入成本高，且<strong>业务数据流转关系相对不清晰，难以及时聚焦、运营投放增长问题；</strong></p>
+</li>
+<li>
+<p>缺乏数据层面上及时、全面的把控和纠偏；</p>
+</li>
+<li>
+<p><strong>各渠道电商模式不尽相同</strong>，各个系统中存放了各自割裂的数据，<strong>指标不统一</strong>，需要人工统一的工作较多；且数据出口多，各方均需要反复确认及核对业务数据，口径统一不规范；</p>
+</li>
+<li>
+<p><strong>现在的渠道系统：渠道接入与订单下游业务紧密耦合</strong></p>
+</li>
+</ol>
+<p>随着业务需求的增多，渠道服务变得越来越庞大，渠道接入与订单下游业务紧密耦合，存在的问题如下：</p>
+<ol>
+<li>现有系统中商户信息通过<strong>配置文件进行配置，由开发人员进行维护</strong>，而下游业务服务（如售后单、物流单回传）则依赖于渠道服务配置文件。</li>
+<li>对日益增长的系统迭代开发需求，如售后管理、数据分析、仓储分销管理等，目前<strong>渠道接入系统与订单下游业务紧密耦合</strong>，如订单同步（精品课、硬件）、物流发货、人工灌单、售后（退、换货等）单处理、服务单（客户问题工单）处理、财务对账等；</li>
+<li>代码耦合度过高，业务逻辑和三方交互代码夹杂在一起，每次改动牵一发而动全身，改动影响面难以评估；</li>
+<li>面向需求开发的方式，导致系统耦合严重，缺乏整体的方案设计；</li>
+</ol>
+<p><strong>三.  目标&amp;收益</strong></p>
+<p><strong>3.1 目标</strong></p>
+<ol>
+<li>提高工作效率，降低成本：
+<ol>
+<li>提供统一的电商售后管理工具，解决需要在多个电商平台、店铺间切换带来的工作效率问题；</li>
+<li>提供统一的销售数据指标词典和统一的数据出口，解决周期性报表重复输出的问题；</li>
+<li>通过优化流程和提高效率，降低运营成本，降低数据获取成本；</li>
+</ol>
+</li>
+<li>优化运营管理：实现订单、直播数据化业务管理，提供数据支持，推动精细化运营，在数据层面上及时、全面的把控和纠偏；</li>
+<li>提高客户满意度：通过提高问题处理时效和优化运营管理，提高客户满意度。</li>
+</ol>
+<p><strong>3.2 收益</strong></p>
+<p>业务收益：</p>
+<ol>
+<li>集成性和数据一致性：通过整合各个业务、各个渠道功能和模块，实现电商数据信息在系统内部自动流动，避免数据冗余和信息孤岛</li>
+<li>一体化管理系统可提高工作效率，减少人为错误，提供准确、可靠的数据基础。</li>
+<li>增强业务监控与决策支持：集中化的数据视角有利于对业务进行全面监控，为业务决策提供有力支持。</li>
+<li>提升团队协同效果：多渠道整合后的系统便于团队成员之间的沟通与协作，提升团队工作效果。</li>
+<li>沉淀中台服务能力</li>
+</ol>
+<p>系统开发收益：</p>
+<ol>
+<li>多平台多渠道统一渠道对接流程提高开发效率</li>
+<li>将渠道的接入与业务系统进行解耦，避免“牵一发而动全身”的问题，多个模块之间不存在系统入侵，提高系统稳定性；</li>
+<li>服务解耦，提供系统稳定性</li>
+</ol>
+<p><strong>四. 初步解决方案</strong></p>
+<p><strong>4.1 架构设计</strong></p>
+<p>**服务解耦 + 标准化数据交互 + 业务系统服务模块化：**将渠道的接入与业务系统进行解耦，渠道网关只负责与外部电商渠道进行对接，一切与外部渠道服务交互（正逆向）走渠道网关；</p>
+<p>![](../../.vuepress/public/imgs/流程图 (2).png)</p>
+<p><strong>4.2 模块设计</strong></p>
+<p><strong>渠道网关</strong></p>
 <ul>
-<li><a href="#spring%E8%BF%9B%E9%98%B6---spring-aop%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%E4%B9%8Baop%E4%BB%A3%E7%90%86%E7%9A%84%E5%88%9B%E5%BB%BA">Spring进阶 - Spring AOP实现原理详解之AOP代理的创建</a>
+<li>**定位：**统一渠道对接流程，负责与各渠道对接，进行标准化数据接入，聚合所有与外部渠道相关的交互，将外部电商与有道业务系统隔离。</li>
+<li><strong>核心功能：</strong></li>
+</ul>
+
+<p>多平台交易订单获取</p>
+<p>标准化渠道接入接口</p>
+<p>订单数据标准化</p>
+<p>标准化订单信息同步</p>
+<p>现有的系统设计文档：https://confluence.inner.youdao.com/pages/viewpage.action?pageId=247627340</p>
+<p><strong>店铺管理</strong></p>
+<p>多渠道多平台店铺可视化配置与管理</p>
+<p><strong>售后管理</strong></p>
 <ul>
-<li><a href="#%E5%BC%95%E5%85%A5">引入</a></li>
-<li><a href="#%E4%BB%A3%E7%90%86%E7%9A%84%E5%88%9B%E5%BB%BA">代理的创建</a>
+<li><strong>定位：多渠道、多类型的售后订单处理工具</strong></li>
+<li><strong>核心功能：</strong></li>
+</ul>
+<p>各渠道售后（退、换货等）单处理、服务单（客户问题工单）处理统一处理</p>
+<p>售后单时效、流程管理与提醒</p>
+<p>操作记录</p>
+<p>财务、物流、业务退款同步</p>
+<p><strong>需求PRD：</strong><a href="https://docs.popo.netease.com/lingxi/c0d5de6f3bfb4fa782943cbbb6521a9e?appVersion=4.11.1&amp;deviceType=0&amp;popo_hidenativebar=1&amp;popo_noindicator=1&amp;disposable_login_token=1" target="_blank" rel="noopener noreferrer">PRD-电商渠道管理平台-售后管理1期-抖店</a></p>
+<p><strong>数据分析</strong></p>
 <ul>
-<li><a href="#%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E7%9A%84advisor">获取所有的Advisor</a></li>
-<li><a href="#%E5%88%9B%E5%BB%BA%E4%BB%A3%E7%90%86%E7%9A%84%E5%85%A5%E5%8F%A3%E6%96%B9%E6%B3%95">创建代理的入口方法</a></li>
-<li><a href="#%E4%BE%9D%E6%8D%AE%E6%9D%A1%E4%BB%B6%E5%88%9B%E5%BB%BA%E4%BB%A3%E7%90%86jdk%E6%88%96cglib">依据条件创建代理(jdk或cglib)</a></li>
+<li><strong>定位：多渠道数据标准化存储、输出和分析</strong></li>
+<li><strong>核心功能：</strong></li>
+</ul>
+<p>各平台多店铺销售、退款、运费、交易费用等经营数据自动汇总；精细到商品规格维度的数据统计和分析， 为促销活动提供依据；</p>
+<p>固定周期的售后数据，以统计电商平台售后单量、进行颓废原因分析、对一线客服工作量进行售后单维度统计；</p>
+<p>直播数据获取：获取API接口数据：如抖音订单表、抖音退费表、千川消耗表、千川直播间数据表，抖音佣金表；利用数据抓取技术补充数据等；</p>
+<p>数据标准化：建立数据指标词典，统一指标命名、拉齐指标定义和口径；</p>
+<p>数据消费：数据实时同步至数据中台，搭建线上数据看板等方式统一数据出口；</p>
+<p><strong>财务、物流同步</strong></p>
+<p><strong>订单管理</strong></p>
+<ul>
+<li><strong>定位：以订单维度进行根据不同的业务需求进行处理，各个模块互相隔离</strong>
+<ul>
+<li>**订单同步：**与教务系统对接的精品课订单生成等</li>
+<li>**物流发货同步：**同步电商渠道物流信息等</li>
+<li>退款、精品课/硬件同步等</li>
+<li>订单数据沉淀</li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>]]></summary>
-    <content type="html"><![CDATA[
-<blockquote>
-<p>上文我们介绍了Spring AOP原理解析的切面实现过程(将切面类的所有切面方法根据使用的注解生成对应Advice，并将Advice连同切入点匹配器和切面类等信息一并封装到Advisor)。本文在此基础上继续介绍，代理（cglib代理和JDK代理）的创建过程。@pdai</p>
-</blockquote>
-<ul>
-<li>[Spring进阶 - Spring AOP实现原理详解之AOP代理的创建](#spring进阶</li>
 </ul>
 ]]></content>
-    <published>2024-09-04T14:55:43.000Z</published>
+    <published>2024-12-16T09:31:05.000Z</published>
   </entry>
   <entry>
-    <title type="text"># Spring进阶- Spring IOC实现原理详解之Bean实例化(生命周期,循环依赖等)</title>
-    <id>https://www.codenook.cn/%E6%A1%86%E6%9E%B6/Spring/IOC/Bean%E5%AE%9E%E4%BE%8B%E5%8C%96(%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F_%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E7%AD%89).html</id>
-    <link href="https://www.codenook.cn/%E6%A1%86%E6%9E%B6/Spring/IOC/Bean%E5%AE%9E%E4%BE%8B%E5%8C%96(%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F_%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E7%AD%89).html"/>
-    <updated>2024-09-04T14:55:43.000Z</updated>
+    <title type="text"></title>
+    <id>https://www.codenook.cn/%E9%A1%B9%E7%9B%AE/%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F/%E5%BB%B6%E8%BF%9F%E9%98%9F%E5%88%97.html</id>
+    <link href="https://www.codenook.cn/%E9%A1%B9%E7%9B%AE/%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F/%E5%BB%B6%E8%BF%9F%E9%98%9F%E5%88%97.html"/>
+    <updated>2024-12-16T09:31:05.000Z</updated>
+    <summary type="html"><![CDATA[<h2>mooncake-gate</h2>
+<h3>主要功能</h3>
+<p>客户端提交任务，根据任务的过期时间，判断是否需要进行持久化，然后分发到不同的topic。</p>
+<h3>主要类</h3>
+<ol>
+<li><strong>OpenController 类</strong>
+<ul>
+<li><code>submit</code> 方法：接收外部任务请求，生成UUID（如果未提供），并调用 <code>submitInner</code> 方法提交任务。</li>
+<li><code>submitInner</code> 方法：将任务分发到相应的处理器（如Kafka），并返回提交结果。</li>
+<li><code>uuid</code> 方法：生成并返回一个新的UUID。</li>
+<li><code>markTaskDone</code> 方法：标记任务为完成状态。</li>
+</ul>
+</li>
+<li><strong>Dispatcher 接口</strong>
+<ul>
+<li>定义了 <code>dispatch</code> 方法，用于将任务发送到相应的处理器或持久化存储。</li>
+</ul>
+</li>
+<li><strong>DispatcherImpl 类</strong>
+<ul>
+<li>实现了 <code>Dispatcher</code> 接口，具体实现了任务分发逻辑。</li>
+<li><code>dispatch</code> 方法：根据任务的过期时间，将任务发送到不同的Kafka topic。</li>
+<li><code>send</code> 方法：将任务发送到指定的Kafka topic。</li>
+<li><code>needStore</code> 方法：判断任务是否需要持久化存储。</li>
+</ul>
+</li>
+</ol>]]></summary>
+    <content type="html"><![CDATA[<h2>mooncake-gate</h2>
+<h3>主要功能</h3>
+<p>客户端提交任务，根据任务的过期时间，判断是否需要进行持久化，然后分发到不同的topic。</p>
+<h3>主要类</h3>
+<ol>
+<li><strong>OpenController 类</strong>
+<ul>
+<li><code>submit</code> 方法：接收外部任务请求，生成UUID（如果未提供），并调用 <code>submitInner</code> 方法提交任务。</li>
+<li><code>submitInner</code> 方法：将任务分发到相应的处理器（如Kafka），并返回提交结果。</li>
+<li><code>uuid</code> 方法：生成并返回一个新的UUID。</li>
+<li><code>markTaskDone</code> 方法：标记任务为完成状态。</li>
+</ul>
+</li>
+<li><strong>Dispatcher 接口</strong>
+<ul>
+<li>定义了 <code>dispatch</code> 方法，用于将任务发送到相应的处理器或持久化存储。</li>
+</ul>
+</li>
+<li><strong>DispatcherImpl 类</strong>
+<ul>
+<li>实现了 <code>Dispatcher</code> 接口，具体实现了任务分发逻辑。</li>
+<li><code>dispatch</code> 方法：根据任务的过期时间，将任务发送到不同的Kafka topic。</li>
+<li><code>send</code> 方法：将任务发送到指定的Kafka topic。</li>
+<li><code>needStore</code> 方法：判断任务是否需要持久化存储。</li>
+</ul>
+</li>
+</ol>
+<h3>提供的接口</h3>
+<ul>
+<li><code>POST /submit</code>：提交延时任务。</li>
+<li><code>POST /inner/submit</code>：内部提交任务接口。</li>
+<li><code>GET /uuid</code>：生成UUID。</li>
+<li><code>POST /api/task/done</code>：标记任务完成</li>
+</ul>
+<h3>时序图</h3>
+<div class="language-mermaid line-numbers-mode" data-highlighter="shiki" data-ext="mermaid" data-title="mermaid" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">sequenceDiagram</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant 客户端</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant OpenController</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant UidGenerator</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant Dispatcher</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant Kafka</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    客户端-&gt;&gt;OpenController: POST /submit</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    OpenController-&gt;&gt;UidGenerator: fetchRandomId (如果UUID为空)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    UidGenerator--&gt;&gt;OpenController: 返回UUID</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    OpenController-&gt;&gt;OpenController: 创建任务 (createTask)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    OpenController-&gt;&gt;Dispatcher: dispatch(task)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    Dispatcher-&gt;&gt;Kafka: 发送到持久化Topic (如果需要)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    Dispatcher-&gt;&gt;Kafka: 发送到触发持久化Topic</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    Dispatcher-&gt;&gt;Kafka: 发送到触发Topic</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    Dispatcher--&gt;&gt;OpenController: 返回分发结果</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    OpenController--&gt;&gt;客户端: ResultDTO&lt;SubmitResultVo&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    客户端-&gt;&gt;OpenController: GET /uuid</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    OpenController-&gt;&gt;UidGenerator: fetchRandomId</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    UidGenerator--&gt;&gt;OpenController: 返回UUID</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    OpenController--&gt;&gt;客户端: ResultDTO&lt;UuidResultVo&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    客户端-&gt;&gt;OpenController: POST /api/task/done</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    OpenController-&gt;&gt;ConsumerClient: done(appId, uuid)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    ConsumerClient--&gt;&gt;OpenController: 返回结果</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    OpenController--&gt;&gt;客户端: ResultDTO&lt;?&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>topic</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>trigger-topic: course_mooncake_trigger</span></span>
+<span class="line"><span>trigger-persistent-topic: course_mooncake_persistent</span></span>
+<span class="line"><span>triggered-persistent-topic: course_mooncake_triggered_persistent</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol>
+<li><strong>persistentTask</strong>：用于持久化任务的Topic。</li>
+<li><strong>triggeredPersistentTask</strong>：用于触发任务的Topic。</li>
+</ol>
+<h4>发送到不同Topic的逻辑</h4>
+<ol>
+<li><strong>持久化任务</strong>：
+<ul>
+<li>当有新的任务需要持久化时，任务会被发送到<code>persistentTask</code> Topic。</li>
+<li>这些任务通常是需要在未来某个时间点执行的任务。</li>
+</ul>
+</li>
+<li><strong>触发任务</strong>：
+<ul>
+<li>当持久化任务的执行时间到达时，任务会被发送到<code>triggeredPersistentTask </code> Topic。</li>
+<li>这些任务是已经到达执行时间，需要立即处理的任务。</li>
+</ul>
+</li>
+</ol>
+<h4>不同Topic的处理逻辑</h4>
+<ol>
+<li>
+<p><strong>persistentTask</strong> Topic的处理逻辑：</p>
+<ul>
+<li><strong>消费任务</strong>：<code>PersistentConsumer</code>会从<code>persistentTask</code> Topic中消费消息。</li>
+<li><strong>保存到数据库</strong>：消费到的任务会被保存到数据库中，记录任务的详细信息和状态。</li>
+<li><strong>提交偏移量</strong>：任务保存成功后，提交Kafka的消费偏移量，确保消息不会被重复消费。</li>
+</ul>
+</li>
+<li>
+<p><strong>triggeredPersistentTask</strong> Topic的处理逻辑：</p>
+<ul>
+<li>
+<p><strong>消费任务</strong>：<code>PersistentConsumer</code>会从<code>triggeredPersistentTask</code> Topic中消费消息。</p>
+</li>
+<li>
+<p><strong>保存到数据库</strong>：消费到的任务会被保存到数据库中，更新任务的状态为“待执行”。</p>
+</li>
+<li>
+<p><strong>提交偏移量</strong>：任务保存成功后，提交Kafka的消费偏移量，确保消息不会被重复消费</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2>mooncake-producer</h2>
+<ol>
+<li><strong>Timer 类</strong>
+<ul>
+<li><code>Timer</code> 类负责管理时间轮的拨动和任务的添加。</li>
+<li><code>start</code> 方法：启动定时任务，每隔一定时间拨动时间轮。</li>
+<li><code>add</code> 方法：将任务添加到时间轮中。</li>
+</ul>
+</li>
+<li><strong>TimerService 类</strong>
+<ul>
+<li><code>TimerService</code> 类负责管理任务的触发和消费。</li>
+<li><code>afterPropertiesSet</code> 方法：初始化服务，启动检查点服务和触发器，并启动Kafka消费者。</li>
+<li><code>doTrigger</code> 方法：从队列中获取任务并发送到Kafka的执行器Topic。</li>
+<li><code>doConsume</code> 方法：从Kafka的触发Topic中消费任务，并将任务添加到检查点服务中。</li>
+<li><code>doConsumerInner</code> 方法：具体的消费逻辑，包括分区的分配和撤销处理。</li>
+<li><code>createLoad</code> 方法：从Kafka记录中创建任务负载对象。</li>
+</ul>
+</li>
+<li><strong>TimeWheel 类</strong>
+<ul>
+<li><code>TimeWheel</code> 类实现了时间轮的核心逻辑，包括任务的添加和时间的推进。</li>
+<li><code>add</code> 方法：将任务添加到时间轮中。</li>
+<li><code>pointTo</code> 方法：推进时间轮到指定时间点，并触发过期任务。</li>
+</ul>
+</li>
+<li><strong>Load 类</strong>
+<ul>
+<li><code>Load</code> 类表示一个任务负载，包含任务的相关信息。</li>
+<li><code>getExpireTime</code> 方法：获取任务的过期时间。</li>
+</ul>
+</li>
+<li><strong>Expired 接口</strong>
+<ul>
+<li><code>Expired</code> 接口定义了获取过期时间的方法。</li>
+</ul>
+</li>
+<li><strong>CheckPointService 类</strong>
+<ul>
+<li><code>CheckPointService</code> 类负责管理检查点，确保任务的正确处理和提交。</li>
+<li><code>start</code> 方法：启动检查点服务。</li>
+<li><code>register</code> 方法：注册检查点。</li>
+<li><code>deregister</code> 方法：注销检查点。</li>
+<li><code>add</code> 方法：添加任务到检查点。</li>
+<li><code>remove</code> 方法：从检查点移除任务。</li>
+<li><code>doConsume</code> 方法：处理检查点的添加和移除操作。</li>
+</ul>
+</li>
+<li><strong>CheckPoint 类</strong>
+<ul>
+<li><code>CheckPoint</code> 类表示一个检查点，管理任务的提交和标记。</li>
+<li><code>add</code> 方法：添加任务到检查点。</li>
+<li><code>tryMark</code> 方法：尝试标记任务为已处理。</li>
+<li><code>tryUpdateCommitOffset</code> 方法：更新提交偏移量。</li>
+</ul>
+</li>
+<li><strong>Bucket 类</strong>
+<ul>
+<li><code>Bucket</code> 类表示一个任务桶，管理任务的计数和最大偏移量。</li>
+<li><code>merge</code> 方法：合并任务到桶中。</li>
+<li><code>decrement</code> 方法：减少桶中的任务计数。</li>
+</ul>
+</li>
+</ol>
+<h3>提供的接口</h3>
+<ul>
+<li><code>TimerService</code> 类提供了任务触发和消费的核心逻辑，通过Kafka进行任务的分发和消费。</li>
+<li><code>CheckPointService</code> 类提供了检查点的管理接口，确保任务的正确处理和提交。</li>
+</ul>
+<div class="language-mermaid line-numbers-mode" data-highlighter="shiki" data-ext="mermaid" data-title="mermaid" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">sequenceDiagram</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant 客户端</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant TimerService</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant Timer</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant TimeWheel</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant CheckPointService</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant Kafka</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    客户端-&gt;&gt;TimerService: 提交任务</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TimerService-&gt;&gt;Timer: add(task)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    Timer-&gt;&gt;TimeWheel: add(task)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TimerService-&gt;&gt;TimerService: afterPropertiesSet()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TimerService-&gt;&gt;CheckPointService: start()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TimerService-&gt;&gt;Kafka: 启动消费者 (doConsume)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TimerService-&gt;&gt;Kafka: 启动触发器 (doTrigger)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    loop 每隔一定时间</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        Timer-&gt;&gt;TimeWheel: pointTo(currentTime)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    end</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    loop 消费任务</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        Kafka-&gt;&gt;TimerService: 消费任务 (doConsume)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        TimerService-&gt;&gt;CheckPointService: add(load)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    end</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    loop 触发任务</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        TimerService-&gt;&gt;Queue: take()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        Queue--&gt;&gt;TimerService: load</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        TimerService-&gt;&gt;Kafka: 发送任务到执行器 (doTrigger)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        Kafka--&gt;&gt;TimerService: 发送成功</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        TimerService-&gt;&gt;CheckPointService: remove(load)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    end</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>系统时序图解释</h3>
+<p>该系统时序图展示了延时任务调度系统的主要流程，包括任务的提交、时间轮的拨动、任务的消费和触发。以下是主要流程的详细描述：</p>
+<ol>
+<li><strong>任务提交</strong>
+<ul>
+<li>客户端向 <code>TimerService</code> 提交任务。</li>
+<li><code>TimerService</code> 调用 <code>Timer</code> 的 <code>add</code> 方法，将任务添加到时间轮中。</li>
+<li><code>Timer</code> 调用 <code>TimeWheel</code> 的 <code>add</code> 方法，将任务添加到具体的时间槽中。</li>
+</ul>
+</li>
+<li><strong>系统初始化</strong>
+<ul>
+<li><code>TimerService</code> 调用 <code>afterPropertiesSet</code> 方法，初始化服务。</li>
+<li><code>TimerService</code> 启动 <code>CheckPointService</code>，调用其 <code>start</code> 方法。</li>
+<li><code>TimerService</code> 启动 Kafka 消费者，调用 <code>doConsume</code> 方法。</li>
+<li><code>TimerService</code> 启动触发器，调用 <code>doTrigger</code> 方法。</li>
+</ul>
+</li>
+<li><strong>时间轮拨动</strong>
+<ul>
+<li><code>Timer</code> 每隔一定时间调用 <code>TimeWheel</code> 的 <code>pointTo</code> 方法，推进时间轮到当前时间点。</li>
+<li><code>TimeWheel</code> 检查并触发过期任务。</li>
+</ul>
+</li>
+<li><strong>任务消费</strong>
+<ul>
+<li>Kafka 消费者从 Kafka 的触发 Topic 中消费任务，调用 <code>TimerService</code> 的 <code>doConsume</code> 方法。</li>
+<li><code>TimerService</code> 调用 <code>CheckPointService</code> 的 <code>add</code> 方法，将任务添加到检查点服务中。</li>
+</ul>
+</li>
+<li><strong>任务触发</strong>
+<ul>
+<li><code>TimerService</code> 从队列中获取任务，调用 <code>doTrigger</code> 方法。</li>
+<li><code>TimerService</code> 将任务发送到 Kafka 的执行器 Topic。</li>
+<li>Kafka 确认任务发送成功。</li>
+<li><code>TimerService</code> 调用 <code>CheckPointService</code> 的 <code>remove</code> 方法，从检查点服务中移除任务。</li>
+</ul>
+</li>
+</ol>
+<h3>主要流程总结</h3>
+<ul>
+<li><strong>任务提交</strong>：客户端提交任务，任务被添加到时间轮中。</li>
+<li><strong>系统初始化</strong>：初始化服务，启动检查点服务、Kafka 消费者和触发器。</li>
+<li><strong>时间轮拨动</strong>：定时拨动时间轮，检查并触发过期任务。</li>
+<li><strong>任务消费</strong>：Kafka 消费者消费任务，将任务添加到检查点服务中。</li>
+<li><strong>任务触发</strong>：从队列中获取任务，发送到执行器，确认发送成功后从检查点服务中移除任务。</li>
+</ul>
+<ol>
+<li><strong>Timer 类</strong>
+<ul>
+<li><code>Timer</code> 类负责管理时间轮的拨动和任务的添加。</li>
+<li><code>start</code> 方法：启动定时任务，每隔一定时间拨动时间轮。</li>
+<li><code>add</code> 方法：将任务添加到时间轮中。</li>
+</ul>
+</li>
+<li><strong>TimerService 类</strong>
+<ul>
+<li><code>TimerService</code> 类负责管理任务的触发和消费。</li>
+<li><code>afterPropertiesSet</code> 方法：初始化服务，启动检查点服务和触发器，并启动Kafka消费者。</li>
+<li><code>doTrigger</code> 方法：从队列中获取任务并发送到Kafka的执行器Topic。</li>
+<li><code>doConsume</code> 方法：从Kafka的触发Topic中消费任务，并将任务添加到检查点服务中。</li>
+<li><code>doConsumerInner</code> 方法：具体的消费逻辑，包括分区的分配和撤销处理。</li>
+<li><code>createLoad</code> 方法：从Kafka记录中创建任务负载对象。</li>
+</ul>
+</li>
+<li><strong>TimeWheel 类</strong>
+<ul>
+<li><code>TimeWheel</code> 类实现了时间轮的核心逻辑，包括任务的添加和时间的推进。</li>
+<li><code>add</code> 方法：将任务添加到时间轮中。</li>
+<li><code>pointTo</code> 方法：推进时间轮到指定时间点，并触发过期任务。</li>
+</ul>
+</li>
+<li><strong>Load 类</strong>
+<ul>
+<li><code>Load</code> 类表示一个任务负载，包含任务的相关信息。</li>
+<li><code>getExpireTime</code> 方法：获取任务的过期时间。</li>
+</ul>
+</li>
+<li><strong>Expired 接口</strong>
+<ul>
+<li><code>Expired</code> 接口定义了获取过期时间的方法。</li>
+</ul>
+</li>
+<li><strong>CheckPointService 类</strong>
+<ul>
+<li><code>CheckPointService</code> 类负责管理检查点，确保任务的正确处理和提交。</li>
+<li><code>start</code> 方法：启动检查点服务。</li>
+<li><code>register</code> 方法：注册检查点。</li>
+<li><code>deregister</code> 方法：注销检查点。</li>
+<li><code>add</code> 方法：添加任务到检查点。</li>
+<li><code>remove</code> 方法：从检查点移除任务。</li>
+<li><code>doConsume</code> 方法：处理检查点的添加和移除操作。</li>
+</ul>
+</li>
+<li><strong>CheckPoint 类</strong>
+<ul>
+<li><code>CheckPoint</code> 类表示一个检查点，管理任务的提交和标记。</li>
+<li><code>add</code> 方法：添加任务到检查点。</li>
+<li><code>tryMark</code> 方法：尝试标记任务为已处理。</li>
+<li><code>tryUpdateCommitOffset</code> 方法：更新提交偏移量。</li>
+</ul>
+</li>
+<li><strong>Bucket 类</strong>
+<ul>
+<li><code>Bucket</code> 类表示一个任务桶，管理任务的计数和最大偏移量。</li>
+<li><code>merge</code> 方法：合并任务到桶中。</li>
+<li><code>decrement</code> 方法：减少桶中的任务计数。</li>
+</ul>
+</li>
+</ol>
+<h2>mooncake-consumer</h2>
+<p>主要实现了延时任务的消费、执行和管理。它包括了任务的HTTP请求处理、任务状态管理、任务重试机制、Redis缓存管理、以及与其他服务的通信等功能。</p>
+<h4>代码分析</h4>
+<ol>
+<li><strong>TomcatAccessLogCustomizer 类</strong>
+<ul>
+<li>该类实现了 <code>WebServerFactoryCustomizer&lt;TomcatServletWebServerFactory&gt;</code> 接口，用于自定义 Tomcat 的访问日志配置。</li>
+<li><code>customize</code> 方法：获取 Tomcat 的 <code>AccessLogValve</code> 并设置日志保留天数为1天。</li>
+</ul>
+</li>
+<li><strong>Stage 枚举</strong>
+<ul>
+<li>该枚举定义了任务的不同阶段，包括 <code>TODO</code>、<code>INIT</code> 和 <code>DONE</code>。</li>
+<li>提供了获取阶段值的方法 <code>getValue</code> 和根据值获取阶段的方法 <code>of</code>。</li>
+</ul>
+</li>
+<li><strong>Props 类</strong>
+<ul>
+<li>该类用于读取配置文件中的 Redis 配置信息。</li>
+<li>包含一个内部静态类 <code>Redis</code>，用于存储 Redis 地址列表。</li>
+</ul>
+</li>
+<li><strong>InternalController 类</strong>
+<ul>
+<li>该类是一个 Spring MVC 控制器，提供了两个接口用于执行任务和标记任务完成。</li>
+<li><code>executeTask</code> 方法：接收任务并调用 <code>CakeExecutor</code> 执行任务。</li>
+<li><code>interceptTask</code> 方法：接收任务标识并调用 <code>CakeExecutor</code> 标记任务完成。</li>
+</ul>
+</li>
+<li><strong>GateClient 接口</strong>
+<ul>
+<li>该接口使用 FeignClient 与 <code>mooncake-gate</code> 服务通信，提供了提交任务和获取 UUID 的接口。</li>
+<li>包含一个内部静态类 <code>Fallback</code>，用于处理服务调用失败的情况。</li>
+</ul>
+</li>
+<li><strong>CoreConfig 类</strong>
+<ul>
+<li>该类是一个 Spring 配置类，提供了 OkHttpClient 和 JedisCluster 的 Bean 配置。</li>
+<li><code>okHttpClient</code> 方法：配置 OkHttpClient。</li>
+<li><code>getJedisCluster</code> 方法：配置 JedisCluster。</li>
+</ul>
+</li>
+<li><strong>TaskHandlers 类</strong>
+<ul>
+<li>该类用于查找并创建任务处理器。</li>
+<li><code>find</code> 方法：根据任务创建 <code>HttpTaskHandler</code>。</li>
+</ul>
+</li>
+<li><strong>TaskHandler 接口</strong>
+<ul>
+<li>该接口定义了任务处理器的基本方法，包括异步执行和同步执行。</li>
+</ul>
+</li>
+<li><strong>HttpTaskHandler 类</strong>
+<ul>
+<li>该类实现了 <code>TaskHandler</code> 接口，负责处理 HTTP 任务。</li>
+<li><code>executeAsync</code> 方法：异步执行任务。</li>
+<li><code>execute</code> 方法：同步执行任务。</li>
+<li><code>httpRequest</code> 方法：创建 HTTP 请求。</li>
+<li><code>handleHttpTaskResponse</code> 方法：处理 HTTP 响应。</li>
+</ul>
+</li>
+<li><strong>CakeExecutor 类</strong>
+<ul>
+<li>该类实现了 <code>TaskManager</code> 接口，负责任务的执行和管理。</li>
+<li><code>mooncakeExecutor</code> 方法：Kafka 消费者，接收并处理任务。</li>
+<li><code>tryRunTask</code> 方法：尝试执行任务。</li>
+<li><code>handleAfterExecution</code> 方法：处理任务执行后的逻辑。</li>
+<li><code>executeTask</code> 方法：执行任务。</li>
+<li><code>markTaskDone</code> 方法：标记任务完成。</li>
+</ul>
+</li>
+<li><strong>OkHttpService 类</strong>
+<ul>
+<li>该类提供了 OkHttpClient 的管理和配置。</li>
+<li><code>client</code> 方法：根据超时时间获取 OkHttpClient。</li>
+</ul>
+</li>
+</ol>
+<h3>提供的接口</h3>
+<ul>
+<li>
+<p>InternalController</p>
+<p>提供了两个接口：</p>
+<ul>
+<li><code>/execute</code>：执行任务。</li>
+<li><code>/done</code>：标记任务完成。</li>
+</ul>
+</li>
+<li>
+<p>GateClient</p>
+<p>提供了两个接口：</p>
+<ul>
+<li><code>/inner/submit</code>：提交任务。</li>
+<li><code>/uuid</code>：获取 UUID。</li>
+</ul>
+</li>
+</ul>
+<h3>系统时序图</h3>
+<div class="language-mermaid line-numbers-mode" data-highlighter="shiki" data-ext="mermaid" data-title="mermaid" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">sequenceDiagram</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant 客户端</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant InternalController</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant CakeExecutor</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant TaskHandlers</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant HttpTaskHandler</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant GateClient</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant Redis</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant Kafka</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    客户端-&gt;&gt;InternalController: 提交任务 (executeTask)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    InternalController-&gt;&gt;CakeExecutor: executeTask(task)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    CakeExecutor-&gt;&gt;Redis: tryRunTask(task)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    Redis--&gt;&gt;CakeExecutor: 返回结果</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    CakeExecutor-&gt;&gt;TaskHandlers: find(task)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskHandlers-&gt;&gt;HttpTaskHandler: 创建 HttpTaskHandler</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    HttpTaskHandler-&gt;&gt;CakeExecutor: executeAsync(commitCallback)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    HttpTaskHandler-&gt;&gt;HttpTaskHandler: 发送 HTTP 请求</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    HttpTaskHandler-&gt;&gt;CakeExecutor: handleAfterExecution(success, task)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    CakeExecutor-&gt;&gt;Redis: markTaskDone(appId, uuid)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    客户端-&gt;&gt;InternalController: 标记任务完成 (interceptTask)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    InternalController-&gt;&gt;CakeExecutor: markTaskDone(appId, uuid)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    CakeExecutor-&gt;&gt;Redis: markTaskDone(appId, uuid)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    Kafka-&gt;&gt;CakeExecutor: 消费任务 (mooncakeExecutor)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    CakeExecutor-&gt;&gt;Redis: tryRunTask(task)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    Redis--&gt;&gt;CakeExecutor: 返回结果</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    CakeExecutor-&gt;&gt;TaskHandlers: find(task)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskHandlers-&gt;&gt;HttpTaskHandler: 创建 HttpTaskHandler</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    HttpTaskHandler-&gt;&gt;CakeExecutor: executeAsync(commitCallback)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    HttpTaskHandler-&gt;&gt;HttpTaskHandler: 发送 HTTP 请求</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    HttpTaskHandler-&gt;&gt;CakeExecutor: handleAfterExecution(success, task)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    CakeExecutor-&gt;&gt;Redis: markTaskDone(appId, uuid)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    loop 重试任务</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        CakeExecutor-&gt;&gt;GateClient: 提交任务 (retryNextTask)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        GateClient--&gt;&gt;CakeExecutor: 返回结果</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    end</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>主要流程总结</h3>
+<ul>
+<li><strong>任务提交</strong>：客户端提交任务，任务被添加到时间轮中。</li>
+<li><strong>系统初始化</strong>：初始化服务，启动检查点服务、Kafka 消费者和触发器。</li>
+<li><strong>时间轮拨动</strong>：定时拨动时间轮，检查并触发过期任务。</li>
+<li><strong>任务消费</strong>：Kafka 消费者消费任务，将任务添加到检查点服务中。</li>
+<li><strong>任务触发</strong>：从队列中获取任务，发送到执行器，确认发送成功后从检查点服务中移除任务。</li>
+<li><strong>任务执行</strong>：通过 HTTP 请求执行任务，处理任务执行后的逻辑，包括重试机制和任务状态管理。</li>
+</ul>
+<h2>mooncake-watcher</h2>
+<p>主要实现了延时任务的持久化、分片管理、任务生命周期管理以及与其他服务的通信。它包括了任务的持久化、任务的分片管理、任务的触发和执行、任务的状态管理、以及与其他服务的通信等功能。</p>
+<h4>代码分析</h4>
+<ol>
+<li><strong>InternalController 类</strong>
+<ul>
+<li>该类是一个 Spring MVC 控制器，提供了三个接口用于分片管理。</li>
+<li><code>flush</code> 方法：刷新所有分片。</li>
+<li><code>pop</code> 方法：获取指定分片的任务。</li>
+<li><code>createShard</code> 方法：创建或更新分片总数。</li>
+</ul>
+</li>
+<li><strong>PersistentConsumer 类</strong>
+<ul>
+<li>该类实现了 <code>InitializingBean</code> 接口，用于消费 Kafka 中的持久化任务并将其保存到数据库中。</li>
+<li><code>afterPropertiesSet</code> 方法：启动持久化任务和触发任务的消费线程。</li>
+<li><code>persistentTask</code> 方法：消费持久化任务并保存到数据库中。</li>
+<li><code>triggeredPersistentTask</code> 方法：消费触发任务并保存到数据库中。</li>
+</ul>
+</li>
+<li><strong>ShardManager 接口</strong>
+<ul>
+<li>该接口定义了分片管理的基本方法，包括获取分片配置、获取分片、填充分片和创建或更新分片总数。</li>
+</ul>
+</li>
+<li><strong>ShardManagerImpl 类</strong>
+<ul>
+<li>该类实现了 <code>ShardManager</code> 接口，负责分片的管理。</li>
+<li><code>afterPropertiesSet</code> 方法：初始化分片配置。</li>
+<li><code>getShard</code> 方法：获取指定分片的任务。</li>
+<li><code>fillShards</code> 方法：填充分片。</li>
+<li><code>createOrUpdateShardTotal</code> 方法：创建或更新分片总数。</li>
+</ul>
+</li>
+<li><strong>TaskLifeCycleManager 接口</strong>
+<ul>
+<li>该接口定义了任务生命周期管理的基本方法，包括刷新任务到触发器、刷新任务到消费者和清除过期任务。</li>
+</ul>
+</li>
+<li><strong>TaskLifeCycleManagerImpl 类</strong>
+<ul>
+<li>该类实现了 <code>TaskLifeCycleManager</code> 接口，负责任务的生命周期管理。</li>
+<li><code>flushToTrigger</code> 方法：定期将持久化任务发送到触发器。</li>
+<li><code>flushToConsumer</code> 方法：定期将持久化任务发送到消费者。</li>
+<li><code>flushToBin</code> 方法：定期清除过期任务。</li>
+</ul>
+</li>
+<li><strong>TaskRepository 接口</strong>
+<ul>
+<li>该接口继承了 <code>JpaRepository</code>，用于操作数据库中的任务实体。</li>
+<li>提供了根据状态和过期时间查询任务的方法。</li>
+</ul>
+</li>
+<li><strong>TaskRepositoryHelper 类</strong>
+<ul>
+<li>该类提供了批量更新任务状态的方法。</li>
+</ul>
+</li>
+<li><strong>Shard 类</strong>
+<ul>
+<li>该类表示一个分片，包含分片总数和当前分片。</li>
+<li>提供了分片的有效性检查和分片命中判断的方法。</li>
+</ul>
+</li>
+<li><strong>ShardConfigValue 类</strong>
+<ul>
+<li>该类表示分片配置的值，包含分片总数和分片键。</li>
+</ul>
+</li>
+<li><strong>TaskEntity 类</strong>
+<ul>
+<li>该类表示任务实体，包含任务的基本信息和状态。</li>
+<li>提供了初始化任务和触发任务的方法。</li>
+</ul>
+</li>
+<li><strong>TaskId 类</strong>
+<ul>
+<li>该类表示任务的唯一标识，包含应用ID和任务ID。</li>
+</ul>
+</li>
+<li><strong>ConsumerClient 接口</strong>
+<ul>
+<li>该接口使用 FeignClient 与 <code>mooncake-consumer</code> 服务通信，提供了执行任务的接口。</li>
+<li>包含一个内部静态类 <code>Fallback</code>，用于处理服务调用失败的情况。</li>
+</ul>
+</li>
+</ol>
+<h3>提供的接口</h3>
+<ul>
+<li>
+<p>InternalController</p>
+<p>提供了三个接口：</p>
+<ul>
+<li><code>/shard/fill</code>：刷新所有分片。</li>
+<li><code>/shard/pop</code>：获取指定分片的任务。</li>
+<li><code>/shard/create</code>：创建或更新分片总数。</li>
+</ul>
+</li>
+<li>
+<p>ConsumerClient</p>
+<p>提供了一个接口：</p>
+<ul>
+<li><code>/execute</code>：执行任务。</li>
+</ul>
+</li>
+</ul>
+<h3>系统时序图</h3>
+<div class="language-mermaid line-numbers-mode" data-highlighter="shiki" data-ext="mermaid" data-title="mermaid" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">sequenceDiagram</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant 客户端</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant InternalController</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant ShardManager</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant PersistentConsumer</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant TaskRepository</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant Kafka</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant TaskLifeCycleManager</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant ConsumerClient</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    客户端-&gt;&gt;InternalController: 刷新分片 (flush)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    InternalController-&gt;&gt;ShardManager: fillShards(id)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    ShardManager-&gt;&gt;ShardManager: 填充分片</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    客户端-&gt;&gt;InternalController: 获取分片任务 (pop)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    InternalController-&gt;&gt;ShardManager: getShard(id)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    ShardManager-&gt;&gt;InternalController: 返回分片任务</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    客户端-&gt;&gt;InternalController: 创建分片 (createShard)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    InternalController-&gt;&gt;ShardManager: createOrUpdateShardTotal(k, total)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    ShardManager-&gt;&gt;ShardManager: 创建或更新分片总数</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    Kafka-&gt;&gt;PersistentConsumer: 消费持久化任务 (persistentTask)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    PersistentConsumer-&gt;&gt;TaskRepository: 保存任务到数据库</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskRepository--&gt;&gt;PersistentConsumer: 返回结果</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    PersistentConsumer-&gt;&gt;Kafka: 提交消费偏移量</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    Kafka-&gt;&gt;PersistentConsumer: 消费触发任务 (triggeredPersistentTask)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    PersistentConsumer-&gt;&gt;TaskRepository: 保存任务到数据库</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskRepository--&gt;&gt;PersistentConsumer: 返回结果</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    PersistentConsumer-&gt;&gt;Kafka: 提交消费偏移量</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskLifeCycleManager-&gt;&gt;TaskRepository: 查询需要触发的任务</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskRepository--&gt;&gt;TaskLifeCycleManager: 返回任务列表</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskLifeCycleManager-&gt;&gt;Kafka: 发送任务到触发器 (flushToTrigger)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    Kafka--&gt;&gt;TaskLifeCycleManager: 返回结果</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskLifeCycleManager-&gt;&gt;TaskRepository: 查询需要执行的任务</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskRepository--&gt;&gt;TaskLifeCycleManager: 返回任务列表</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskLifeCycleManager-&gt;&gt;ConsumerClient: 执行任务 (flushToConsumer)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    ConsumerClient--&gt;&gt;TaskLifeCycleManager: 返回结果</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskLifeCycleManager-&gt;&gt;TaskRepository: 查询过期任务</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskRepository--&gt;&gt;TaskLifeCycleManager: 返回任务列表</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskLifeCycleManager-&gt;&gt;TaskRepository: 删除过期任务 (flushToBin)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskRepository--&gt;&gt;TaskLifeCycleManager: 返回结果</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>主要流程总结</h3>
+<ul>
+<li><strong>分片管理</strong>：通过 <code>ShardManager</code> 实现分片的创建、更新和填充。</li>
+<li><strong>任务持久化</strong>：通过 <code>PersistentConsumer</code> 消费 Kafka 中的持久化任务并保存到数据库中。</li>
+<li><strong>任务生命周期管理</strong>：通过 <code>TaskLifeCycleManager</code> 定期刷新任务到触发器和消费者，并清除过期任务。</li>
+<li><strong>任务执行</strong>：通过 <code>ConsumerClient</code> 与 <code>mooncake-consumer</code> 服务通信，执行任务。</li>
+</ul>
+<h2>Mooncake 模块分析及主要流程</h2>
+<h4>主要模块</h4>
+<ol>
+<li><strong>InternalController</strong>：提供分片管理的接口。</li>
+<li><strong>PersistentConsumer</strong>：消费 Kafka 中的持久化任务并保存到数据库。</li>
+<li><strong>ShardManager</strong>：管理分片，包括获取、填充和创建/更新分片。</li>
+<li><strong>TaskLifeCycleManager</strong>：管理任务的生命周期，包括刷新任务到触发器、消费者和清除过期任务。</li>
+<li><strong>TaskRepository</strong>：操作数据库中的任务实体。</li>
+<li><strong>ConsumerClient</strong>：与 <code>mooncake-consumer</code> 服务通信，执行任务。</li>
+</ol>
+<h4>主要流程</h4>
+<ol>
+<li><strong>分片管理</strong>：
+<ul>
+<li>创建或更新分片总数。</li>
+<li>获取指定分片的任务。</li>
+<li>刷新所有分片。</li>
+</ul>
+</li>
+<li><strong>任务持久化</strong>：
+<ul>
+<li>消费 Kafka 中的持久化任务并保存到数据库。</li>
+<li>消费 Kafka 中的触发任务并保存到数据库。</li>
+</ul>
+</li>
+<li><strong>任务生命周期管理</strong>：
+<ul>
+<li>定期将持久化任务发送到触发器。</li>
+<li>定期将持久化任务发送到消费者。</li>
+<li>定期清除过期任务。</li>
+</ul>
+</li>
+<li><strong>任务执行</strong>：
+<ul>
+<li>通过 <code>ConsumerClient</code> 与 <code>mooncake-consumer</code> 服务通信，执行任务。</li>
+</ul>
+</li>
+</ol>
+<h3>流程图</h3>
+<div class="language-mermaid line-numbers-mode" data-highlighter="shiki" data-ext="mermaid" data-title="mermaid" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">flowchart TD</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    A[客户端] --&gt;|刷新分片| B[InternalController]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    B --&gt;|fillShards| C[ShardManager]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    C --&gt;|填充分片| C</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    A --&gt;|获取分片任务| B</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    B --&gt;|getShard| C</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    C --&gt;|返回分片任务| B</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    B --&gt;|返回分片任务| A</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    A --&gt;|创建分片| B</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    B --&gt;|createOrUpdateShardTotal| C</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    C --&gt;|创建或更新分片总数| C</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    D[Kafka] --&gt;|消费持久化任务| E[PersistentConsumer]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    E --&gt;|保存任务到数据库| F[TaskRepository]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    F --&gt;|返回结果| E</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    E --&gt;|提交消费偏移量| D</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    D --&gt;|消费触发任务| E</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    E --&gt;|保存任务到数据库| F</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    F --&gt;|返回结果| E</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    E --&gt;|提交消费偏移量| D</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    G[TaskLifeCycleManager] --&gt;|查询需要触发的任务| F</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    F --&gt;|返回任务列表| G</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    G --&gt;|发送任务到触发器| D</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    D --&gt;|返回结果| G</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    G --&gt;|查询需要执行的任务| F</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    F --&gt;|返回任务列表| G</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    G --&gt;|执行任务| H[ConsumerClient]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    H --&gt;|返回结果| G</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    G --&gt;|查询过期任务| F</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    F --&gt;|返回任务列表| G</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    G --&gt;|删除过期任务| F</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    F --&gt;|返回结果| G</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>时序图</h3>
+<div class="language-mermaid line-numbers-mode" data-highlighter="shiki" data-ext="mermaid" data-title="mermaid" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">sequenceDiagram</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant 客户端</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant InternalController</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant ShardManager</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant PersistentConsumer</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant TaskRepository</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant Kafka</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant TaskLifeCycleManager</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    participant ConsumerClient</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    客户端-&gt;&gt;InternalController: 刷新分片 (flush)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    InternalController-&gt;&gt;ShardManager: fillShards(id)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    ShardManager-&gt;&gt;ShardManager: 填充分片</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    客户端-&gt;&gt;InternalController: 获取分片任务 (pop)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    InternalController-&gt;&gt;ShardManager: getShard(id)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    ShardManager-&gt;&gt;InternalController: 返回分片任务</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    客户端-&gt;&gt;InternalController: 创建分片 (createShard)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    InternalController-&gt;&gt;ShardManager: createOrUpdateShardTotal(k, total)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    ShardManager-&gt;&gt;ShardManager: 创建或更新分片总数</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    Kafka-&gt;&gt;PersistentConsumer: 消费持久化任务 (persistentTask)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    PersistentConsumer-&gt;&gt;TaskRepository: 保存任务到数据库</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskRepository--&gt;&gt;PersistentConsumer: 返回结果</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    PersistentConsumer-&gt;&gt;Kafka: 提交消费偏移量</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    Kafka-&gt;&gt;PersistentConsumer: 消费触发任务 (triggeredPersistentTask)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    PersistentConsumer-&gt;&gt;TaskRepository: 保存任务到数据库</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskRepository--&gt;&gt;PersistentConsumer: 返回结果</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    PersistentConsumer-&gt;&gt;Kafka: 提交消费偏移量</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskLifeCycleManager-&gt;&gt;TaskRepository: 查询需要触发的任务</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskRepository--&gt;&gt;TaskLifeCycleManager: 返回任务列表</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskLifeCycleManager-&gt;&gt;Kafka: 发送任务到触发器 (flushToTrigger)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    Kafka--&gt;&gt;TaskLifeCycleManager: 返回结果</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskLifeCycleManager-&gt;&gt;TaskRepository: 查询需要执行的任务</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskRepository--&gt;&gt;TaskLifeCycleManager: 返回任务列表</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskLifeCycleManager-&gt;&gt;ConsumerClient: 执行任务 (flushToConsumer)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    ConsumerClient--&gt;&gt;TaskLifeCycleManager: 返回结果</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskLifeCycleManager-&gt;&gt;TaskRepository: 查询过期任务</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskRepository--&gt;&gt;TaskLifeCycleManager: 返回任务列表</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskLifeCycleManager-&gt;&gt;TaskRepository: 删除过期任务 (flushToBin)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    TaskRepository--&gt;&gt;TaskLifeCycleManager: 返回结果</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>主要实现细节</h3>
+<ol>
+<li><strong>InternalController</strong>：
+<ul>
+<li>提供刷新分片、获取分片任务和创建分片的接口。</li>
+<li>调用 <code>ShardManager</code> 的相应方法进行分片管理。</li>
+</ul>
+</li>
+<li><strong>PersistentConsumer</strong>：
+<ul>
+<li>实现 <code>InitializingBean</code> 接口，启动持久化任务和触发任务的消费线程。</li>
+<li>消费 Kafka 中的持久化任务和触发任务，并保存到数据库中。</li>
+</ul>
+</li>
+<li><strong>ShardManager</strong>：
+<ul>
+<li>管理分片的创建、更新和填充。</li>
+<li>提供获取指定分片任务的方法。</li>
+</ul>
+</li>
+<li><strong>TaskLifeCycleManager</strong>：
+<ul>
+<li>定期刷新任务到触发器和消费者。</li>
+<li>定期清除过期任务。</li>
+</ul>
+</li>
+<li><strong>TaskRepository</strong>：
+<ul>
+<li>提供操作数据库中任务实体的方法。</li>
+<li>提供根据状态和过期时间查询任务的方法。</li>
+</ul>
+</li>
+<li><strong>ConsumerClient</strong>：
+<ul>
+<li>使用 FeignClient 与 <code>mooncake-consumer</code> 服务通信，执行任务。</li>
+</ul>
+</li>
+</ol>
+<p>通过上述模块的协作，系统实现了延时任务的持久化、分片管理、任务生命周期管理和任务执行，确保任务在指定时间点被正确触发和执行，并提供了任务状态管理和分片管理机制。</p>
+<p>你好，今晚19点04分25秒的时候，有一笔支付请求响应超时了，能帮忙看下是什么原因吗。out_trade_no是：317310638640000046083</p>
+<p>部分请求参数如下：</p>
+  &lt;mch_id&gt;1641714449&lt;/mch_id&gt;  &lt;device_info&gt;WEB&lt;/device_info&gt;&lt;out_trade_no&gt;317310638640000046083&lt;/out_trade_no&gt;  &lt;time_start&gt;20241108190424&lt;/time_start&gt;]]></content>
+    <published>2024-12-16T09:31:05.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">详解支付系统</title>
+    <id>https://www.codenook.cn/%E9%A1%B9%E7%9B%AE/%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F/%E6%94%AF%E4%BB%98%E6%B8%A0%E9%81%93%E8%81%9A%E5%90%88%E7%B3%BB%E7%BB%9F.html</id>
+    <link href="https://www.codenook.cn/%E9%A1%B9%E7%9B%AE/%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F/%E6%94%AF%E4%BB%98%E6%B8%A0%E9%81%93%E8%81%9A%E5%90%88%E7%B3%BB%E7%BB%9F.html"/>
+    <updated>2024-12-16T09:31:05.000Z</updated>
     <summary type="html"><![CDATA[
-<blockquote>
-<p>上文，我们看了IOC设计要点和设计结构；以及Spring如何实现将资源配置（以xml配置为例）通过加载，解析，生成BeanDefination并注册到IoC容器中的；容器中存放的是Bean的定义即BeanDefinition放到beanDefinitionMap中，本质上是一个<code>ConcurrentHashMap&lt;String, Object&gt;</code>；并且BeanDefinition接口中包含了这个类的Class信息以及是否是单例等。那么如何从BeanDefinition中实例化Bean对象呢，这是本文主要研究的内容？@pdai</p>
-</blockquote>]]></summary>
+<h1>一. 背景</h1>
+<p>​	随着业务的快速发展与变化，业务模式由原有的独立 APP 售卖模式调整为以业务为导向，各业务百花齐放，各自建设业务系统模式。原有售卖模式采用的支付方式与独立 APP 耦合，且支付方式仅支持一个AppId，对应一个微信或支付宝商户号，无法满足各业务搭建 App 及独立售卖的模式。需要提供业务统一的支付平台能力，支持业务与支付中心一次对接，即可打通支付整体流程。</p>
+<p>支付中心在现代企业中扮演着至关重要的角色，它不仅是内部业务线之间的支付服务提供者，还是与外部三方支付机构或银行之间的资金流转的桥梁，有助于实现支付流程的标准化、高效化和安全化。</p>]]></summary>
     <content type="html"><![CDATA[
-<blockquote>
-<p>上文，我们看了IOC设计要点和设计结构；以及Spring如何实现将资源配置（以xml配置为例）通过加载，解析，生成BeanDefination并注册到IoC容器中的；容器中存放的是Bean的定义即BeanDefinition放到beanDefinitionMap中，本质上是一个<code>ConcurrentHashMap&lt;String, Object&gt;</code>；并且BeanDefinition接口中包含了这个类的Class信息以及是否是单例等。那么如何从BeanDefinition中实例化Bean对象呢，这是本文主要研究的内容？@pdai</p>
-</blockquote>
+<h1>一. 背景</h1>
+<p>​	随着业务的快速发展与变化，业务模式由原有的独立 APP 售卖模式调整为以业务为导向，各业务百花齐放，各自建设业务系统模式。原有售卖模式采用的支付方式与独立 APP 耦合，且支付方式仅支持一个AppId，对应一个微信或支付宝商户号，无法满足各业务搭建 App 及独立售卖的模式。需要提供业务统一的支付平台能力，支持业务与支付中心一次对接，即可打通支付整体流程。</p>
+<p>支付中心在现代企业中扮演着至关重要的角色，它不仅是内部业务线之间的支付服务提供者，还是与外部三方支付机构或银行之间的资金流转的桥梁，有助于实现支付流程的标准化、高效化和安全化。</p>
 <ul>
-<li><a href="#spring%E8%BF%9B%E9%98%B6--spring-ioc%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%E4%B9%8Bbean%E5%AE%9E%E4%BE%8B%E5%8C%96%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E7%AD%89">Spring进阶- Spring IOC实现原理详解之Bean实例化(生命周期,循环依赖等)</a>
+<li>对内方面：支付中心为各业务线提供统一的支付和退款服务，方便各业务之间的数据交互和整合，有助于简化业务流程，减少重复开发和维护成本，同时提高支付和退款的处理效率；</li>
+<li>对外方面：支付中心需要对接各种三方支付机构或银行服务，实现资金的流转，为企业提供更广泛、更灵活的支付结算服务，满足企业不断增长的业务需求。</li>
+</ul>
+<p>支付中心系统的设计旨在实现对内统一支付和退款服务，对外对接三方支付服务，实现资金流转。</p>
+<h2>1. 业务架构</h2>
+<p>支付中心是一个支付聚合服务，旨在最大程度减少其他服务对接第三方支付的开发量，并将支付相关功能、信息统一化管理。</p>
+<figure><figcaption></figcaption></figure>
+<h2>2. 极简支付流程</h2>
+<p>从服务端设计的角度看，一个极简的订单支付的流程如下：</p>
+
+<ol>
+<li>创建订单：用户从客户端下单，创建订单的流程，生成订单记录（通常包括订单号、用户信息、商品详情、总价、支付状态等）；</li>
+<li>生成支付信息：商家服务端会根据订单信息生成支付信息，包括支付金额、支付方式、订单号等，用于后续的支付流程；</li>
+<li>返回支付页面：服务端将支付信息返回给客户端，客户端根据支付信息生成支付页面(包含支付金额、支付方式、订单号等信息)，并引导用户进行支付操作；</li>
+<li>发起支付：用户在支付下单页，点击支付，服务端会组装支付参数请求第三方支付进行下单；</li>
+<li>支付结果通知：用户支付完成后，三方支付平台(如支付宝、微信支付等)会向服务端发送支付结果通知。服务端接收到支付结果通知后，会对支付结果进行处理：如果支付成功，服务端会更新订单状态为已支付，并进行相应的业务处理(如库存扣减、通知卖家发货等)；如果支付失败，服务端会更新订单状态为支付失败，并通知用户重新进行支付。</li>
+<li>支付结果回调：服务端将支付结果返回给客户端并展示给用户。如果支付成功，客户端会展示支付成功页面，并引导用户进行后续操作(如查看订单详情等)，如果支付失败，客户端会展示支付失败页面，并提示用户重新进行支付。</li>
+</ol>
+<p>整体支付流程的时序图可如下所示：</p>
+<figure><figcaption></figcaption></figure>
+<h1>二. 支付中心系统设计</h1>
+<h2>1. 系统架构设计</h2>
+<p>支付中心系统的主要职责是处理业务系统发起的所有交易请求，包含商户系统、支付核心等模块，如图所示，主要分为四个大模块：</p>
+<ol>
+<li>
+<p>应用平台：对外提供API网关接口，供其他业务订单系统调用；</p>
+</li>
+<li>
+<p>业务中台：主要包括商户系统和支付系统；</p>
 <ul>
-<li><a href="#%E5%BC%95%E5%85%A5">引入</a></li>
-<li><a href="#beanfactory%E4%B8%ADgetbean%E7%9A%84%E4%B8%BB%E4%BD%93%E6%80%9D%E8%B7%AF">BeanFactory中getBean的主体思路</a>
-<ul>
-<li><a href="#%E5%88%9D%E6%AD%A5%E7%9A%84%E6%80%9D%E8%80%83">初步的思考</a></li>
-<li><a href="#spring%E4%B8%ADgetbean%E7%9A%84%E4%B8%BB%E4%BD%93%E6%80%9D%E8%B7%AF">Spring中getBean的主体思路</a></li>
+<li>
+<p>商户系统：主要关注的是与商户相关的所有业务和功能，包括但不限于商户配置、支付配置、通知配置、交易对账等。商户系统通过提供统一、高效、安全的服务接口，帮助商户更好地管理自己的业务，提高运营效率，降低运营成本；</p>
+</li>
+<li>
+<p>支付系统：主要负责与外部支付通道统一打通，包括但不限于交易支付、退款、回调通知、订单补偿、差错处理、异常通知，包括对业务中台各项服务的配置、监控等；</p>
+</li>
+<li>
+<p>支付通道：用于和三方支付进行对接及管理；</p>
+</li>
 </ul>
 </li>
-<li><a href="#%E9%87%8D%E7%82%B9spring%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98">重点：Spring如何解决循环依赖问题</a>
+<li>
+<p>技术架构：用于实现整个系统功能的技术架构；</p>
+</li>
+</ol>
+<figure><figcaption></figcaption></figure>
+<h2>2. 详细设计</h2>
+<h3>2.1. 支付模块设计</h3>
+<p>业务商户系统在支付时通过统一接口请求支付，对第三方支付平台无感知，由支付系统做统一处理。在进行对接之前，业务商户系统需要在支付系统填写商户信息以便后续支付，整体执行顺序和模块主要包含三部分：</p>
+<ol>
+<li><strong>生成预支付订单</strong>：业务系统调用支付中心之后，支付中心校验商户信息、权限校验，生成支付中心全局唯一支付单号，生成支付订单记录；</li>
+<li><strong>三方支付交互</strong>：支付中心根据支付类型和交易类型以及对应的三方支付接口，生成接口交互签名，组装成统一的支付请求与三方支付交互；</li>
+<li><strong>支付后置处理</strong>：支付中心根据当前支付请求和三方接口响应，落库记录支付订单信息；</li>
+</ol>
+<figure><figcaption></figcaption></figure>
 <ul>
-<li><a href="#spring%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E5%B1%9E%E6%80%A7%E4%BE%9D%E8%B5%96">Spring单例模式下的属性依赖</a></li>
-<li><a href="#spring%E4%B8%BA%E4%BD%95%E4%B8%8D%E8%83%BD%E8%A7%A3%E5%86%B3%E9%9D%9E%E5%8D%95%E4%BE%8B%E5%B1%9E%E6%80%A7%E4%B9%8B%E5%A4%96%E7%9A%84%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96">Spring为何不能解决非单例属性之外的循环依赖？</a>
+<li>
+<p><strong>生成预支付订单的主要步骤</strong></p>
+<p>​	a. 校验商户信息：支付中心从数据库中获取商户信息，并校验商户号、商户状态和交易类型等信息；</p>
+<p>​	b. 权限校验：校验商户是否有权限进行当前支付操作，确保商户有权限进行当前支付操作；</p>
+<p>​	c. 生成支付中心订单号；</p>
+<p>​	d. 创建支付订单对象：根据支付请求信息和商户信息，创建支付订单对象。</p>
+</li>
+</ul>
+<p>支付中心唯一支付订单号的生成方法如下：</p>
+<ol>
+<li>
+<p>获取当前时间戳：以秒为单位获取当前时间戳。</p>
+</li>
+<li>
+<p>生成 Redis 键：</p>
 <ul>
-<li><a href="#spring%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E8%A7%A3%E5%86%B3%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96">Spring为什么不能解决构造器的循环依赖？</a></li>
-<li><a href="#spring%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E8%A7%A3%E5%86%B3prototype%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96">Spring为什么不能解决prototype作用域循环依赖？</a></li>
-<li><a href="#spring%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E8%A7%A3%E5%86%B3%E5%A4%9A%E4%BE%8B%E7%9A%84%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96">Spring为什么不能解决多例的循环依赖？</a></li>
+<li>
+<p>使用 <code>pay:order_id:</code> 作为前缀，加上当前时间戳，生成 Redis 键。</p>
+</li>
+<li>
+<p>使用 Redis 中 <code>setIfAbsent</code> 设置键值对，如果键不存在则设置成功，并设置过期时间为 10 秒。</p>
+</li>
+<li>
+<p>如果 Redis 中已经有该键，使用 <code>increment</code> 方法对键值进行自增，并将结果转换为字符串。</p>
+</li>
+<li>
+<p>如果 Redis 操作失败，使用备用方案生成 6 位随机数作为订单号计数部分。</p>
+</li>
 </ul>
 </li>
-<li><a href="#%E9%82%A3%E4%B9%88%E5%85%B6%E5%AE%83%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3">那么其它循环依赖如何解决？</a></li>
-</ul>
+<li>
+<p>格式化订单号：将订单号序列格式化为 6 位数字，不足位数前面补零。</p>
 </li>
-<li><a href="#%E9%87%8D%E7%82%B9spring%E4%B8%ADbean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">重点：Spring中Bean的生命周期</a>
+<li>
+<p>拼接订单号：将支付类型编号、当前时间戳、订单号计数和 4 位随机数拼接在一起，生成最终的支付单号；</p>
+</li>
+</ol>
 <ul>
-<li><a href="#spring-bean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%B5%81%E7%A8%8B">Spring Bean生命周期流程</a></li>
-<li><a href="#spring-bean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%A1%88%E4%BE%8B">Spring Bean生命周期案例</a></li>
-<li><a href="#spring-bean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%BA%90%E7%A0%81">Spring Bean生命周期源码</a></li>
-</ul>
+<li>
+<p>例如：订单号：4 1732690422 000001 7403 ，其中 4 是指支付宝支付；1732690422 是时间戳；000001 为订单号计数器；7403 是四位随机数。</p>
 </li>
-<li><a href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0">参考文章</a></li>
-</ul>
+<li>
+<p><strong>三方支付交互</strong></p>
 </li>
 </ul>
-<p><a href="#%E5%BC%95%E5%85%A5">#</a> 引入</p>
+<p>支付中心根据支付类型和交易类型，选择对应的三方支付接口，生成接口交互签名，组装成统一的支付请求与三方支付交互，三方支付交互的主要步骤如下：</p>
+<ol>
+<li>根据支付类型和交易类型，选择对应的三方支付接口；</li>
+<li>使用三方支付接口所需的参数和加密方法，生成签名；</li>
+<li>将签名和其他必要参数组装成统一的支付请求；</li>
+<li>调用三方支付接口，发送支付请求；</li>
+<li>接收并处理三方支付接口的响应结果；</li>
+</ol>
+<ul>
+<li><strong>支付后置处理</strong></li>
+</ul>
+<p>支付后置处理主要是根据当前支付请求和三方支付的接口响应，落库记录支付订单信息，主要步骤如下：</p>
+<ol>
+<li>根据支付请求和三方支付接口响应结果，更新当前支付订单的状态、三方平台的交易流水号等信息；</li>
+<li>如果当前订单是首次支付，则将订单信息插入数据库；否则，更新已有订单信息；</li>
+<li>在支付订单落库的同时，添加订单超时触发器，将支付订单放入到延时队列中，延时任务的执行时间为订单的支付过期时间；</li>
+<li>如果系统压测流量，根据实际情况调用 mockCallbackGateway 进行模拟回调；</li>
+</ol>
+<h3>2.2. 支付回调设计</h3>
+<p>​	第三方支付平台支付成功后，会回调支付中心，由支付中心系统进行统一处理后再回调业务商户系统，具体流程如图所示：</p>
+<figure><figcaption></figcaption></figure>
+<p>支付中心系统支付回调具体步骤如下：</p>
+<ol>
+<li>
+<p>第三方支付平台通过HTTP请求通知支付中心支付结果，支付中心接收到请求后，校验回调的支付订单：</p>
+<ul>
+<li>
+<p>如果订单已经被处理过，或者订单不存在，则直接返回处理结果；</p>
+</li>
+<li>
+<p>如果订单存在且未被处理过，则校验商户信息、签名和金额；</p>
+</li>
+<li>
+<p>如果验证不通过，则返回处理失败；如果验证通过，则更新订单状态，并异步回调商户系统通知支付结果；</p>
+</li>
+<li>
+<p>如果回调商户系统失败，会放入延时队列，进行失败重试，如果回调商户系统成功，则修改支付订单表中支付回调状态</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>其中，支付中心在收到三方支付回调后异步回调商户系统，将三方支付与商户系统完全解耦，并在回调失败的24小时内不断重试，直至回调成功；</p>
+<p>商户在接收到支付中心发送的回调后只需要处理自身后续逻辑即可，无需考虑安全效验等问题。</p>
+<p><strong>支付核心状态通过CAS方式修改</strong>，解决并发情况下数据一致性问题。</p>
+<p>对于回调商户通知结果现有两种方式，通过接口回调或通过kafka发送消息，选择哪种或两者皆由具体业务场景决定。</p>
+<p>| <strong>方案</strong> | <strong>优点</strong>                       | <strong>缺点</strong>                                 | <strong>采用情况</strong> |
+|</p>
 ]]></content>
-    <published>2024-09-04T14:55:43.000Z</published>
+    <category term="项目"/>
+    <published>2024-09-13T10:26:32.000Z</published>
   </entry>
 </feed>
