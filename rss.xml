@@ -6,8 +6,8 @@
     <link>https://www.codenook.cn/</link>
     <description>不积跬步无以至千里, 仰望星空还需脚踏实地，碎片化的输入，体系化的沉淀, 消化、应用才会成为我们的财富</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 16 Dec 2024 09:55:55 GMT</pubDate>
-    <lastBuildDate>Mon, 16 Dec 2024 09:55:55 GMT</lastBuildDate>
+    <pubDate>Mon, 16 Dec 2024 10:35:54 GMT</pubDate>
+    <lastBuildDate>Mon, 16 Dec 2024 10:35:54 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -1064,10 +1064,10 @@
   &lt;mch_id&gt;1641714449&lt;/mch_id&gt;  &lt;device_info&gt;WEB&lt;/device_info&gt;&lt;out_trade_no&gt;317310638640000046083&lt;/out_trade_no&gt;  &lt;time_start&gt;20241108190424&lt;/time_start&gt;]]></content:encoded>
     </item>
     <item>
-      <title>详解支付系统</title>
+      <title>支付渠道聚合系统</title>
       <link>https://www.codenook.cn/%E9%A1%B9%E7%9B%AE/%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F/%E6%94%AF%E4%BB%98%E6%B8%A0%E9%81%93%E8%81%9A%E5%90%88%E7%B3%BB%E7%BB%9F.html</link>
       <guid>https://www.codenook.cn/%E9%A1%B9%E7%9B%AE/%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F/%E6%94%AF%E4%BB%98%E6%B8%A0%E9%81%93%E8%81%9A%E5%90%88%E7%B3%BB%E7%BB%9F.html</guid>
-      <source url="https://www.codenook.cn/rss.xml">详解支付系统</source>
+      <source url="https://www.codenook.cn/rss.xml">支付渠道聚合系统</source>
       <description>支付系统设计--服务端 一. 背景 ​ 随着业务的快速发展与变化，业务模式由原有的独立 APP 售卖模式调整为以业务为导向，各业务百花齐放，各自建设业务系统模式。原有售卖模式采用的支付方式与独立 APP 耦合，且支付方式仅支持一个AppId，对应一个微信或支付宝商户号，无法满足各业务搭建 App 及独立售卖的模式。需要提供业务统一的支付平台能力，支持业...</description>
       <category>项目</category>
       <pubDate>Fri, 13 Sep 2024 10:26:32 GMT</pubDate>
