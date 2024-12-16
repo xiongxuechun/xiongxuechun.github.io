@@ -275,7 +275,7 @@ export default navbar([
                 prefix: "",
                 children: [
                     {
-                        text: "详解支付系统",
+                        text: "支付系统",
                         link: "支付系统/",
                     }
                 ],
